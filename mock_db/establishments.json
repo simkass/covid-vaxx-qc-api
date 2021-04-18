@@ -1,0 +1,1734 @@
+{
+    "establishments": [
+        {
+            "id": 60045,
+            "name": "CIUSSS de l’Estrie (CHUS) - RLS de la Pommeraie  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "375, rue Argyll",
+            "public_url": "https://clients3.clicsante.ca/60045"
+        },
+        {
+            "id": 60046,
+            "name": "CIUSSS de l’Estrie (CHUS) - RLS de la Haute-Yamaska  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "901 Principale, Granby",
+            "public_url": "https://clients3.clicsante.ca/60046"
+        },
+        {
+            "id": 60048,
+            "name": "CIUSSS de l’Estrie (CHUS) - RLS de Coaticook  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "375, rue Argyll",
+            "public_url": "https://clients3.clicsante.ca/60048"
+        },
+        {
+            "id": 60049,
+            "name": "CIUSSS de l’Estrie (CHUS) - RLS de Sherbrooke  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "375, rue Argyll",
+            "public_url": "https://clients3.clicsante.ca/60049"
+        },
+        {
+            "id": 60050,
+            "name": "CIUSSS de l’Estrie (CHUS) - RLS de Val Saint-François  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "375, rue Argyll",
+            "public_url": "https://clients3.clicsante.ca/60050"
+        },
+        {
+            "id": 60051,
+            "name": "CIUSSS de l’Estrie (CHUS) - RLS d’Asbestos  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "425 Chassé, Asbestos J1T2B6",
+            "public_url": "https://clients3.clicsante.ca/60051"
+        },
+        {
+            "id": 60052,
+            "name": "CIUSSS de l’Estrie (CHUS) - RLS du Haut-Saint-François  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "143 Rue Saint-Pierre, East Angus, J0B1R0",
+            "public_url": "https://clients3.clicsante.ca/60052"
+        },
+        {
+            "id": 60053,
+            "name": "CIUSSS de l’Estrie (CHUS) - RLS de Granit  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "375, rue Argyll",
+            "public_url": "https://clients3.clicsante.ca/60053"
+        },
+        {
+            "id": 60059,
+            "name": "CISSS de l'Outaouais - RLS de Grande-Rivière - Hull - Gatineau  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "80, avenue Gatineau",
+            "public_url": "https://clients3.clicsante.ca/60059"
+        },
+        {
+            "id": 60074,
+            "name": "CISSS de Lanaudière - MRC Joliette  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "260, rue Lavaltrie Sud",
+            "public_url": "https://clients3.clicsante.ca/60074"
+        },
+        {
+            "id": 61546,
+            "name": "Brunet - Pharmacie Simon Campagna Pharmacien Inc - Vaccin COVID-19 Citoyen",
+            "phone": "450 534-3434",
+            "address": "89-D, , BOUL. BROMONT, BROMONT, J2L 2K5",
+            "public_url": "https://clients3.clicsante.ca/61546"
+        },
+        {
+            "id": 61612,
+            "name": "Brunet Plus - Pharmacie Marie-Josée Champoux et Samuel Guertin inc. - Vaccin COVID-19 Citoyen",
+            "phone": "4503789021",
+            "address": "4, ROBINSON, GRANBY, J2G 8Z9",
+            "public_url": "https://clients3.clicsante.ca/61612"
+        },
+        {
+            "id": 62003,
+            "name": "Costco DRUMMONDVILLE - Pharmacie Grégoire Arakelian - Vaccin COVID-19 Citoyen",
+            "phone": "(819)473-7577",
+            "address": "105, RUE ROBERT-BERNARD, DRUMMONDVILLE, J2C 0P6",
+            "public_url": "https://clients3.clicsante.ca/62003"
+        },
+        {
+            "id": 62004,
+            "name": "Costco SHERBROOKE - Pharmacie Grégoire Arakelian - Vaccin COVID-19 Citoyen",
+            "phone": "(873)500-5546",
+            "address": "3800, BOUL. MONSEIGNEUR-FORTIER, SHERBROOKE, J1L 0J6",
+            "public_url": "https://clients3.clicsante.ca/62004"
+        },
+        {
+            "id": 62005,
+            "name": "Costco TERREBONNE - Pharmacie Grégoire Arakelian - Vaccin COVID-19 Citoyen",
+            "phone": "(450) 657 - 4352",
+            "address": "870, MONTÉE DES PIONNIERS, TERREBONNE, J6V 1N9",
+            "public_url": "https://clients3.clicsante.ca/62005"
+        },
+        {
+            "id": 62007,
+            "name": "Costco LAVAL - Pharmacie Grégoire Arakelian. - Vaccin COVID-19 Citoyen",
+            "phone": "(450) 686 - 8833",
+            "address": "2999, AUTOROUTE 440, LAVAL, H7P 5P4",
+            "public_url": "https://clients3.clicsante.ca/62007"
+        },
+        {
+            "id": 62010,
+            "name": "Costco BOUCHERVILLE - Pharmacie Grégoire Arakelian - Vaccin COVID-19 Citoyen",
+            "phone": "(450) 645 - 2658",
+            "address": "635, CH. DE TOURAINE, BOUCHERVILLE, J4B 5E4",
+            "public_url": "https://clients3.clicsante.ca/62010"
+        },
+        {
+            "id": 62014,
+            "name": "Costco ANJOU - Pharmacie Grégoire Arakelian - Vaccin COVID-19",
+            "phone": "(514) 493 - 2104",
+            "address": "7373, RUE BOMBARDIER, ANJOU, H1J 2V2",
+            "public_url": "https://clients3.clicsante.ca/62014"
+        },
+        {
+            "id": 62016,
+            "name": "Costco MARCHÉ CENTRAL - Pharmacie Grégoire Arakelian - Vaccin COVID-19",
+            "phone": "(514) 381 - 1662",
+            "address": "1015 Rue du Marché Central, Montréal, QC H4N 3J8, Canada",
+            "public_url": "https://clients3.clicsante.ca/62016"
+        },
+        {
+            "id": 62609,
+            "name": "Familiprix - Pharmacie Nesrine Leboukh inc. - Vaccin COVID-19 Citoyen",
+            "phone": "4509943322",
+            "address": "110, ROBINSON, GRANBY, J2G 7L4",
+            "public_url": "https://clients3.clicsante.ca/62609"
+        },
+        {
+            "id": 63158,
+            "name": "Jean-Coutu - Pharm. Maxime Daoust-Charest, Pharmacien Inc - Vaccin COVID-19 Citoyen",
+            "phone": "4503726666",
+            "address": "50, RUE DENISON EST, GRANBY, J2G 4C6",
+            "public_url": "https://clients3.clicsante.ca/63158"
+        },
+        {
+            "id": 63178,
+            "name": "Jean-Coutu - Pharmacie Jean Provost, Majed Bitar et Kevin Smith inc. - Vaccin COVID-19 Citoyen",
+            "phone": "4503755596",
+            "address": "751, RUE PRINCIPALE, GRANBY, J2G 2Y6",
+            "public_url": "https://clients3.clicsante.ca/63178"
+        },
+        {
+            "id": 64094,
+            "name": "Proxim - Pharmacie Richard Auger, Pierre-Luc Lemelin et Isabelle Pelletier Inc. - Vaccin COVID-19 Citoyen",
+            "phone": "4509941654",
+            "address": "234, DENISON EST, GRANBY, J2H 2R6",
+            "public_url": "https://clients3.clicsante.ca/64094"
+        },
+        {
+            "id": 64610,
+            "name": "Uniprix- Jacques Laganière pharmacien Inc. Vaccin Covid-19 ",
+            "phone": "450-372-0814",
+            "address": "320, BOUL. LECLERC O., GRANBY, J2G 1V3",
+            "public_url": "https://clients3.clicsante.ca/64610"
+        },
+        {
+            "id": 64612,
+            "name": "Uniprix- Jacques Laganière pharmacien Inc. Vaccin Covid-19",
+            "phone": "450-378-6999",
+            "address": "35, RUE PRINCIPALE, GRANBY, J2G 2T7",
+            "public_url": "https://clients3.clicsante.ca/64612"
+        },
+        {
+            "id": 64616,
+            "name": "Uniprix - Pharmacie Isabelle Dupont, pharmacienne Inc. - Vaccin COVID-19 Citoyen",
+            "phone": "4503724447",
+            "address": "338, SAINT-JACQUES, GRANBY, J2G 3N2",
+            "public_url": "https://clients3.clicsante.ca/64616"
+        },
+        {
+            "id": 64626,
+            "name": "Uniprix - Jacques Laganière, Carole Labranche, Minh Anh Chu - Vaccin COVID-19",
+            "phone": "450 534-5534",
+            "address": "82, BOUL DE BROMONT SUITE A101, BROMONT, J2L 2K3",
+            "public_url": "https://clients3.clicsante.ca/64626"
+        },
+        {
+            "id": 70016,
+            "name": "Site de vaccination de masse de Granby - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "901, rue Principale, Granby, J2G 2Z5",
+            "public_url": "https://clients3.clicsante.ca/70016"
+        },
+        {
+            "id": 70017,
+            "name": "Site de vaccination de Cowansville (Domaine du parc) - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "175, rue Principale, Cowansville, J2K 3L9",
+            "public_url": "https://clients3.clicsante.ca/70017"
+        },
+        {
+            "id": 70032,
+            "name": "Centre communautaire Nation Micmac de Gespeg - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "34, montée Corté Real  Gaspé, G4X 6S2",
+            "public_url": "https://clients3.clicsante.ca/70032"
+        },
+        {
+            "id": 70093,
+            "name": "Centre de vaccination COVID St-Césaire - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "1372 rue Notre Dame, St-Césaire, J0L1T0",
+            "public_url": "https://clients3.clicsante.ca/70093"
+        },
+        {
+            "id": 72609,
+            "name": "Familiprix - Pharmacie Nesrine Leboukh inc. - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "110, ROBINSON, GRANBY, J2G 7L4",
+            "public_url": "https://clients3.clicsante.ca/72609"
+        },
+        {
+            "id": 74616,
+            "name": "Uniprix - Pharmacie Isabelle Dupont, pharmacienne Inc. - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "338, SAINT-JACQUES, GRANBY, J2G 3N2",
+            "public_url": "https://clients3.clicsante.ca/74616"
+        },
+        {
+            "id": 60111,
+            "name": "CISSS de la Montérégie-Est - Agglomération de Longueuil (Longueuil)- Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "1136 Boulevard Marie-Victorin, Longueuil, J4G 2H9",
+            "public_url": "https://clients3.clicsante.ca/60111"
+        },
+        {
+            "id": 60112,
+            "name": "CISSS de la Montérégie-Est - Agglomération de Longueuil (Boucherville) - Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "1228, rue Nobel, Boucherville, J4B 5H1",
+            "public_url": "https://clients3.clicsante.ca/60112"
+        },
+        {
+            "id": 60113,
+            "name": "CISSS de la Montérégie-Centre - MRC du Haut-Richelieu  - Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "5928, boulevard Cousineau, bureau 200",
+            "public_url": "https://clients3.clicsante.ca/60113"
+        },
+        {
+            "id": 60114,
+            "name": "CISSS de la Montérégie-Centre - MRC de Rouville  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "5928, boulevard Cousineau, bureau 200",
+            "public_url": "https://clients3.clicsante.ca/60114"
+        },
+        {
+            "id": 60115,
+            "name": "CISSS de la Montérégie-Centre -Agglomération de Longueuil (Brossard)  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "5928, boulevard Cousineau, bureau 200",
+            "public_url": "https://clients3.clicsante.ca/60115"
+        },
+        {
+            "id": 60117,
+            "name": "CISSS de la Montérégie-Est - MRC de la Vallée-du-Richelieu - Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "99, rue du Centre-Civique, St-Hilaire J3H 4X4",
+            "public_url": "https://clients3.clicsante.ca/60117"
+        },
+        {
+            "id": 60118,
+            "name": "CISSS de la Montérégie-Est - MRC d'Acton  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "1505 3e Avenue, Acton Vale, J0H1A0",
+            "public_url": "https://clients3.clicsante.ca/60118"
+        },
+        {
+            "id": 60119,
+            "name": "CISSS de la Montérégie-Est - MRC des Maskoutains  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "2740 Avenue Beauparlant, St-Hyacinthe, J2S 4M8",
+            "public_url": "https://clients3.clicsante.ca/60119"
+        },
+        {
+            "id": 60120,
+            "name": "CISSS de la Montérégie-Est - MRC Pierre-De Saurel  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "180, rue Victoria, Sorel, J3P 1Z3",
+            "public_url": "https://clients3.clicsante.ca/60120"
+        },
+        {
+            "id": 60121,
+            "name": "CISSS de la Montérégie-Ouest - MRC de Roussillon  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "5928, boulevard Cousineau, bureau 200",
+            "public_url": "https://clients3.clicsante.ca/60121"
+        },
+        {
+            "id": 60122,
+            "name": "CISSS de la Montérégie-Ouest - MRC du Haut-Saint-Laurent - Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "5928, boulevard Cousineau, bureau 200",
+            "public_url": "https://clients3.clicsante.ca/60122"
+        },
+        {
+            "id": 60123,
+            "name": "CISSS de la Montérégie-Ouest - MRC des Jardins-de-Napierville - Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "5928, boulevard Cousineau, bureau 200",
+            "public_url": "https://clients3.clicsante.ca/60123"
+        },
+        {
+            "id": 60124,
+            "name": "CISSS de la Montérégie-Ouest - MRC Beauharnois- Salaberry - Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "5928, boulevard Cousineau, bureau 200",
+            "public_url": "https://clients3.clicsante.ca/60124"
+        },
+        {
+            "id": 60125,
+            "name": "CISSS de la Montérégie-Ouest - MRC de Vaudreuil-Soulanges  Citoyens - Vaccin COVID-19",
+            "phone": "",
+            "address": "5928, boulevard Cousineau, bureau 200",
+            "public_url": "https://clients3.clicsante.ca/60125"
+        },
+        {
+            "id": 70044,
+            "name": "Centre de vaccination COVID (SNT) Candiac - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "30, rue Strasbourg, Candiac, J5R 0B4",
+            "public_url": "https://clients3.clicsante.ca/70044"
+        },
+        {
+            "id": 70045,
+            "name": "Centre de vaccination COVID (SNT) Valleyfield - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "50, rue Dufferin, Salaberry-de-Valleyfield, J6S 4W4",
+            "public_url": "https://clients3.clicsante.ca/70045"
+        },
+        {
+            "id": 70046,
+            "name": "Sites de Boucherville - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "1075, rue Lionel-Daunais, Boucherville, J4B 8N5",
+            "public_url": "https://clients3.clicsante.ca/70046"
+        },
+        {
+            "id": 70048,
+            "name": "Clinique Dix30 - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "9415, boulevard Leduc, Brossard, J4Y 0A5",
+            "public_url": "https://clients3.clicsante.ca/70048"
+        },
+        {
+            "id": 70065,
+            "name": "Centre de vaccination covid (SNT) RODI - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "1100 route Marie-Victorin, Longueuil, J4G 2H9",
+            "public_url": "https://clients3.clicsante.ca/70065"
+        },
+        {
+            "id": 70067,
+            "name": "Site de vaccination mobile d'Acton - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "1505 3e Avenue, Acton Vale, J0H 1A0",
+            "public_url": "https://clients3.clicsante.ca/70067"
+        },
+        {
+            "id": 70068,
+            "name": "Centre de vaccination covid (SNT) Sorel (Complexe 180) - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "180 rue Victoria, suite 101, Sorel-Tracy, J3P 5N6",
+            "public_url": "https://clients3.clicsante.ca/70068"
+        },
+        {
+            "id": 70069,
+            "name": "Centre de vaccination covid (SNT) La COOP - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "2740 avenue Beauparlant, Saint-Hyacinthe, J2S 4M8",
+            "public_url": "https://clients3.clicsante.ca/70069"
+        },
+        {
+            "id": 70070,
+            "name": "Site de vaccination de Saint-Bruno - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "530 boulevard Clairevue Ouest, Saint-Bruno-de-Montarville, J3V 6E1",
+            "public_url": "https://clients3.clicsante.ca/70070"
+        },
+        {
+            "id": 70071,
+            "name": "Site de vaccination mobile Saint-Hilaire - Vaccin COVID-19 Citoyen - AstraZeneca",
+            "phone": "",
+            "address": "99 rue du Centre-Civique, Saint-Hilaire, J3H 3M8",
+            "public_url": "https://clients3.clicsante.ca/70071"
+        }
+    ],
+    "places": [
+        {
+            "id": 1973,
+            "establishment": 60049,
+            "name_fr": "Centre de vaccination COVID-19 Sherbrooke",
+            "name_en": "Centre COVID-19 vaccination Sherbrooke",
+            "formatted_address": "1600 Boulevard Plateau Saint-Joseph Sherbrooke J1L0C8 Canada",
+            "latitude": 45.4215675,
+            "longitude": -71.9629511,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 135
+                }
+            }
+        },
+        {
+            "id": 1974,
+            "establishment": 60050,
+            "name_fr": "Centre de vaccination COVID-19 du Val-St-François",
+            "name_en": "Centre COVID-19 vaccination Val-St-François",
+            "formatted_address": "5 rue Greenlay Sud Windsor J1S2J3 Canada",
+            "latitude": 45.5658274,
+            "longitude": -72.0098454,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 1250
+                }
+            }
+        },
+        {
+            "id": 1975,
+            "establishment": 60051,
+            "name_fr": "Centre de vaccination COVID-19 du Val Des Sources",
+            "name_en": "Centre COVID-19 vaccination Val Des Sources",
+            "formatted_address": "425 rue Chassé Asbestos J1T2B6 Canada",
+            "latitude": 45.7702553,
+            "longitude": -71.9320142,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 135
+                }
+            }
+        },
+        {
+            "id": 1976,
+            "establishment": 60052,
+            "name_fr": "Centre de vaccination COVID-19 du Haut-Saint-Françcois",
+            "name_en": "Centre COVID-19 vaccination Haut-Saint-François",
+            "formatted_address": "143 Rue St-Pierre East Angus J0B1R0 Canada",
+            "latitude": 45.4853864,
+            "longitude": -71.6555722,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 30
+                }
+            }
+        },
+        {
+            "id": 2891,
+            "establishment": 60053,
+            "name_fr": "Centre de vaccination COVID-19 Du Granit",
+            "name_en": "Centre COVID-19 vaccination Du Granit",
+            "formatted_address": "3700, rue Laval Lac-Mégantic G6B1A4 Canada",
+            "latitude": 45.5887916,
+            "longitude": -70.9025561,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 7185
+                }
+            }
+        },
+        {
+            "id": 2892,
+            "establishment": 60046,
+            "name_fr": "Centre de vaccination COVID-19 Granby",
+            "name_en": "Centre COVID-19 vaccination Granby",
+            "formatted_address": "901 rue Principale Granby J2G2Z5 Canada",
+            "latitude": 45.4145819,
+            "longitude": -72.7532965,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 45,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 2912,
+            "establishment": 60045,
+            "name_fr": "Centre de vaccination COVID-19 Cowansville",
+            "name_en": "Centre COVID-19 vaccination Cowansville",
+            "formatted_address": "175 rue Principale Cowansville J2K3L9 Canada",
+            "latitude": 45.2082669,
+            "longitude": -72.7459224,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 2935,
+            "establishment": 60048,
+            "name_fr": "Centre de vaccination COVID-19 Coaticook",
+            "name_en": "Centre COVID-19 vaccination Coaticook",
+            "formatted_address": "317 rue Saint-Jacques N Coaticook J1A1H6 Canada",
+            "latitude": 45.1368467,
+            "longitude": -71.7966014,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 490
+                }
+            }
+        },
+        {
+            "id": 3377,
+            "establishment": 62014,
+            "name_fr": "Costco - Gregoire Arakelian, pharmacien",
+            "name_en": "Costco - Gregoire Arakelian, pharmacien",
+            "formatted_address": "7373, RUE BOMBARDIER ANJOU H1J2V2 Canada",
+            "latitude": 45.6092107,
+            "longitude": -73.5853909,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 3392,
+            "establishment": 62016,
+            "name_fr": "Costco - Pharmacie Gregoire Arakelian (Montréal) inc.",
+            "name_en": "Costco - Pharmacie Gregoire Arakelian (Montréal) inc.",
+            "formatted_address": "1015, RUE DU MARCHÉ CENTRAL MONTREAL H4N3J8 Canada",
+            "latitude": 45.5364736,
+            "longitude": -73.6602129,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 3735,
+            "establishment": 63178,
+            "name_fr": "Jean-Coutu - Pharmacie Jean Provost, Majed Bitar et Kevin Smith inc.",
+            "name_en": "Jean-Coutu - Pharmacie Jean Provost, Majed Bitar et Kevin Smith inc.",
+            "formatted_address": "751, RUE PRINCIPALE GRANBY J2G2Y6 Canada",
+            "latitude": 45.4111994,
+            "longitude": -72.7473278,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 3880,
+            "establishment": 62005,
+            "name_fr": "Costco - Pharmacie Grégoire Arakelian (Terrebonne) inc.",
+            "name_en": "Costco - Pharmacie Grégoire Arakelian (Terrebonne) inc.",
+            "formatted_address": "870, MONTÉE DES PIONNIERS, TERREBONNE, J6V 1N9",
+            "latitude": 45.7216896,
+            "longitude": -73.5050719,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4057,
+            "establishment": 62007,
+            "name_fr": "Costco - Pharmacie Grégoire Arakelian (Laval) inc.",
+            "name_en": "Costco - Pharmacie Grégoire Arakelian (Laval) inc.",
+            "formatted_address": "2999, AUTOROUTE 440, LAVAL, H7P 5P4",
+            "latitude": 45.5751563,
+            "longitude": -73.75585,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 310,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4144,
+            "establishment": 61546,
+            "name_fr": "Brunet - Pharmacie Simon Campagna Pharmacien Inc",
+            "name_en": "Brunet - Pharmacie Simon Campagna Pharmacien Inc",
+            "formatted_address": "89-D, , BOUL. BROMONT, BROMONT, J2L 2K5",
+            "latitude": 45.318712,
+            "longitude": -72.6481426,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4166,
+            "establishment": 61612,
+            "name_fr": "Brunet Plus - Pharmacie Marie-Josée Champoux et Samuel Guertin inc.",
+            "name_en": "Brunet Plus - Pharmacie Marie-Josée Champoux et Samuel Guertin inc.",
+            "formatted_address": "4, ROBINSON GRANBY J2G8Z9 Canada",
+            "latitude": 45.4096005,
+            "longitude": -72.7444229,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4171,
+            "establishment": 62010,
+            "name_fr": "Costco - Gregoire Arakelian, Pharmacien",
+            "name_en": "Costco - Gregoire Arakelian, Pharmacien",
+            "formatted_address": "635, CH. DE TOURAINE BOUCHERVILLE J4B5E4 Canada",
+            "latitude": 45.5777388,
+            "longitude": -73.4056513,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4193,
+            "establishment": 62609,
+            "name_fr": "Familiprix - Pharmacie Nesrine Leboukh inc.",
+            "name_en": "Familiprix - Pharmacie Nesrine Leboukh inc.",
+            "formatted_address": "110, ROBINSON, GRANBY, J2G 7L4",
+            "latitude": 45.4047874,
+            "longitude": -72.7440596,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4230,
+            "establishment": 64094,
+            "name_fr": "Proxim - Pharmacie Richard Auger, Pierre-Luc Lemelin et Isabelle Pelletier Inc.",
+            "name_en": "Proxim - Pharmacie Richard Auger, Pierre-Luc Lemelin et Isabelle Pelletier Inc.",
+            "formatted_address": "234, DENISON EST GRANBY J2H2R6 Canada",
+            "latitude": 45.3933073,
+            "longitude": -72.708414,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4268,
+            "establishment": 64610,
+            "name_fr": "Uniprix - Jacques Laganière pharmacien Inc.",
+            "name_en": "Uniprix - Jacques Laganière pharmacien Inc.",
+            "formatted_address": "320, BOUL. LECLERC O. GRANBY J2G1V3 Canada",
+            "latitude": 45.4084795,
+            "longitude": -72.7269188,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4270,
+            "establishment": 64612,
+            "name_fr": "Uniprix - Jacques Laganière pharmacien Inc.",
+            "name_en": "Uniprix - Jacques Laganière pharmacien Inc.",
+            "formatted_address": "35, RUE PRINCIPALE GRANBY J2G2T7 Canada",
+            "latitude": 45.3982591,
+            "longitude": -72.7205502,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4274,
+            "establishment": 64616,
+            "name_fr": "Uniprix - Pharmacie Isabelle Dupont, pharmacienne Inc.",
+            "name_en": "Uniprix - Pharmacie Isabelle Dupont, pharmacienne Inc.",
+            "formatted_address": "338 rue St-Jacques granby J2G3N2 Canada",
+            "latitude": 45.3980983,
+            "longitude": -72.7328972,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4284,
+            "establishment": 64626,
+            "name_fr": "Uniprix - Jacques Laganière, Carole Labranche et Minh Anh Chu",
+            "name_en": "Uniprix - Jacques Laganière, Carole Labranche and Minh Anh Chu",
+            "formatted_address": "82, BOUL DE BROMONT SUITE A101 BROMONT J2L2K3 Canada",
+            "latitude": 45.323378,
+            "longitude": -72.646526,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4324,
+            "establishment": 63158,
+            "name_fr": "Jean-Coutu - Pharm. Maxime Daoust-Charest, Pharmacien Inc",
+            "name_en": "Jean-Coutu - Pharm. Maxime Daoust-Charest, Pharmacien Inc",
+            "formatted_address": "50 Denison est Granby J2G4C6 Canada",
+            "latitude": 45.3959742,
+            "longitude": -72.7153441,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4858,
+            "establishment": 62004,
+            "name_fr": "Costco - Grégoire Arakelian, pharmacien",
+            "name_en": "Costco - Grégoire Arakelian, pharmacien",
+            "formatted_address": "3800, BOUL. MONSEIGNEUR-FORTIER SHERBROOKE J1L0J6 Canada",
+            "latitude": 45.4227294,
+            "longitude": -71.9615937,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 4859,
+            "establishment": 62003,
+            "name_fr": "Costco - Grégoire Arakelian, pharmacien",
+            "name_en": "Costco - Grégoire Arakelian, pharmacien",
+            "formatted_address": "105, RUE ROBERT-BERNARD, DRUMMONDVILLE, J2C 0P6",
+            "latitude": 45.9079635,
+            "longitude": -72.5152822,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 110
+                }
+            }
+        },
+        {
+            "id": 5873,
+            "establishment": 74616,
+            "name_fr": "Pharmacie Isabelle Dupont, pharmacienne Inc. - AstraZeneca",
+            "name_en": "Pharmacie Isabelle Dupont, pharmacienne Inc. - AstraZeneca",
+            "formatted_address": "338, SAINT-JACQUES GRANBY J2G3N2 Canada",
+            "latitude": 45.3980983,
+            "longitude": -72.7328972,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 75,
+                    "ta7": 1835
+                }
+            }
+        },
+        {
+            "id": 5890,
+            "establishment": 70016,
+            "name_fr": "Site de vaccination de masse de Granby - AstraZeneca",
+            "name_en": "Site de vaccination de masse de Granby - AstraZeneca",
+            "formatted_address": "901, rue Principale, Granby, J2G 2Z5",
+            "latitude": 45.4145819,
+            "longitude": -72.7532965,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 3225,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5891,
+            "establishment": 70017,
+            "name_fr": "Site de vaccination de Cowansville (Domaine du parc) - AstraZeneca",
+            "name_en": "Site de vaccination de Cowansville (Domaine du parc) - AstraZeneca",
+            "formatted_address": "175, rue Principale, Cowansville, J2K 3L9",
+            "latitude": 45.2082669,
+            "longitude": -72.7459224,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 6945,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 6029,
+            "establishment": 72609,
+            "name_fr": "Pharmacie Nesrine Leboukh inc. - AstraZeneca",
+            "name_en": "Pharmacie Nesrine Leboukh inc. - AstraZeneca",
+            "formatted_address": "110, ROBINSON, GRANBY, J2G 7L4",
+            "latitude": 45.4047874,
+            "longitude": -72.7440596,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 6387,
+            "establishment": 70093,
+            "name_fr": "Centre de vaccination COVID St-Césaire - AstraZeneca",
+            "name_en": "Centre de vaccination COVID St-Césaire - AstraZeneca",
+            "formatted_address": "1372 rue notre Dame, J0L 1T0 St-Césaire J0L1T0 Canada",
+            "latitude": 45.4094195,
+            "longitude": -73.0024419,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 770,
+                    "ta7": 840
+                }
+            }
+        },
+        {
+            "id": 6527,
+            "establishment": 60074,
+            "name_fr": "Bloc K",
+            "name_en": "Bloc K",
+            "formatted_address": "1000, boulevard Ste-Anne Saint charles borromée 00000 Canada",
+            "latitude": 46.0391545,
+            "longitude": -73.4560317,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 6531,
+            "establishment": 60059,
+            "name_fr": "NSA CH Gatineau",
+            "name_en": "NSA CH Gatineau",
+            "formatted_address": "909 Boulevard la Vérendrye O, Gatineau, QC Gatineau J8P7H2 Canada",
+            "latitude": 45.4918677,
+            "longitude": -75.690379,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 100,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 6535,
+            "establishment": 70032,
+            "name_fr": "Salle communautaire Clairence Mainville de Grande-Vallée",
+            "name_en": "Salle communautaire Clairence Mainville de Grande-Vallée",
+            "formatted_address": "5, rue st-François Xavier est Grande-Vallée G0E1K0 Canada",
+            "latitude": 49.2264789,
+            "longitude": -65.1236779,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 2035,
+            "establishment": 60111,
+            "name_fr": "Espace RODI",
+            "name_en": "Espace RODI",
+            "formatted_address": "1136 Boulevard Marie-Victorin Longueuil J4G2H9 Canada",
+            "latitude": 45.5577071,
+            "longitude": -73.4937964,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 15,
+                    "ta7": 45825
+                }
+            }
+        },
+        {
+            "id": 2036,
+            "establishment": 60112,
+            "name_fr": "Hotel Mortagne",
+            "name_en": "Hotel Mortagne",
+            "formatted_address": "1228, rue Nobel, Boucherville, J4B 5H1 Boucherville J4B5H1 Canada",
+            "latitude": 45.5687454,
+            "longitude": -73.4424502,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 60660
+                }
+            }
+        },
+        {
+            "id": 2037,
+            "establishment": 60113,
+            "name_fr": "Centre de vaccination COVID -  MacDonald",
+            "name_en": "Covid vaccination center - MacDonald",
+            "formatted_address": "315 rue MAcDonald, suite 120 Saint-Jean-sur-le-Richelieu J3B8J3 Canada",
+            "latitude": 45.3260692,
+            "longitude": -73.265823,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 420
+                }
+            }
+        },
+        {
+            "id": 2038,
+            "establishment": 60114,
+            "name_fr": "Centre de vaccination Covid - St-Césaire",
+            "name_en": "Covid vaccination center - St-Césaire",
+            "formatted_address": "1372 rue notre Dame, J0L 1T0 Saint-Césaire J0L1T0 Canada",
+            "latitude": 45.4094195,
+            "longitude": -73.0024419,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 40
+                }
+            }
+        },
+        {
+            "id": 2039,
+            "establishment": 60115,
+            "name_fr": "Centre de vaccination COVID Dix30",
+            "name_en": "Covid Vaccination center - Dix30",
+            "formatted_address": "9415 boulevard Leduc, suite 5 Brossard J4Y0A5 Canada",
+            "latitude": 45.4410208,
+            "longitude": -73.4388494,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 2041,
+            "establishment": 60117,
+            "name_fr": "Pavillon Jordi Bonet",
+            "name_en": "Pavillon Jordi Bonet",
+            "formatted_address": "99, rue du Centre-Civique, Saint-Hilaire J3H4X4 Canada",
+            "latitude": 45.5639709,
+            "longitude": -73.1910989,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 450
+                }
+            }
+        },
+        {
+            "id": 2042,
+            "establishment": 60118,
+            "name_fr": "Centre sportif Acton Vale",
+            "name_en": "Centre sportif Acton Vale",
+            "formatted_address": "1505 3e avenue Acton Vale J0H1A0 Canada",
+            "latitude": 45.6558942,
+            "longitude": -72.5735778,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 1215
+                }
+            }
+        },
+        {
+            "id": 2043,
+            "establishment": 60119,
+            "name_fr": "Espace Saint-Hyacinthe - Pavillon La COOP",
+            "name_en": "Espace Saint-Hyacinthe - Pavillon La COOP",
+            "formatted_address": "2740, ave Beauparlant, Saint-Hyacinthe J2S4M8 Canada",
+            "latitude": 45.6367681,
+            "longitude": -72.9572776,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 24900
+                }
+            }
+        },
+        {
+            "id": 2044,
+            "establishment": 60120,
+            "name_fr": "Complexe 180",
+            "name_en": "Complexe 180",
+            "formatted_address": "180, rue Victoria, Sorel-Tracy J3P1Z3 Canada",
+            "latitude": 46.0400486,
+            "longitude": -73.1050654,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 6825
+                }
+            }
+        },
+        {
+            "id": 2882,
+            "establishment": 60121,
+            "name_fr": "Centre vaccination Covid - Candiac",
+            "name_en": "Covid vaccination center - Candiac",
+            "formatted_address": "30 Rue Strasbourg Candiac J5R0B4 Canada",
+            "latitude": 45.3689881,
+            "longitude": -73.518119,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 8190,
+                    "ta7": 21660
+                }
+            }
+        },
+        {
+            "id": 2942,
+            "establishment": 60122,
+            "name_fr": "Centre vaccination Covid - Ormstown",
+            "name_en": "Covid vaccination center - Ormstown",
+            "formatted_address": "Centre récréatif, 87 Rue Roy Ormstown J0S1K0 Canada",
+            "latitude": 45.1224597,
+            "longitude": -73.9859435,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 375,
+                    "ta7": 7875
+                }
+            }
+        },
+        {
+            "id": 2940,
+            "establishment": 60123,
+            "name_fr": "Centre vaccination Covid - St-Rémi",
+            "name_en": "Covid vaccination center - St-Rémi",
+            "formatted_address": "Centre Communautaire, 25 Rue Saint-Sauveur St-Rémi J0L2L0 Canada",
+            "latitude": 45.2551544,
+            "longitude": -73.6143247,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 2943,
+            "establishment": 60124,
+            "name_fr": "Centre vaccination Covid - Beauharnois",
+            "name_en": "Covid vaccination center - Beauharnois",
+            "formatted_address": "Salle Marie-Rose, 600 Rue Ellice Beauharnois J6N3P7 Canada",
+            "latitude": 45.3128124,
+            "longitude": -73.8771276,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 2941,
+            "establishment": 60125,
+            "name_fr": "Centre vaccination Covid - Rigaud",
+            "name_en": "Covid vaccination center - Rigaud",
+            "formatted_address": "Édifice Paul-Brasseur-Salle de l'Amitié, 10 Rue Saint-Jean-Baptiste Est Rigaud J0P1P0 Canada",
+            "latitude": 45.4790526,
+            "longitude": -74.3010296,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5918,
+            "establishment": 70044,
+            "name_fr": "Centre de vaccination COVID (SNT) Candiac - AstraZeneca",
+            "name_en": "Centre de vaccination COVID (SNT) Candiac - AstraZeneca",
+            "formatted_address": "30, rue Strasbourg, Candiac, J5R 0B4",
+            "latitude": 45.3689881,
+            "longitude": -73.518119,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 36120,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5919,
+            "establishment": 70045,
+            "name_fr": "Centre de vaccination COVID (SNT) Valleyfield - AstraZeneca",
+            "name_en": "Centre de vaccination COVID (SNT) Valleyfield - AstraZeneca",
+            "formatted_address": "50, rue Dufferin, Salaberry-de-Valleyfield, J6S 4W4",
+            "latitude": 45.2606574,
+            "longitude": -74.1290753,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 9840,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5920,
+            "establishment": 70046,
+            "name_fr": "Centre multifonctionnel Francine Gadbois - AstraZeneca",
+            "name_en": "Centre multifonctionnel Francine Gadbois - AstraZeneca",
+            "formatted_address": "1075, rue Lionel-Daunais Boucherville J4B8N5 Canada",
+            "latitude": 45.589789,
+            "longitude": -73.4279867,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5926,
+            "establishment": 70048,
+            "name_fr": "Clinique Dix30 - AstraZeneca",
+            "name_en": "Clinique Dix30 - AstraZeneca",
+            "formatted_address": "9415, boulevard Leduc, Brossard, J4Y 0A5",
+            "latitude": 45.4414905,
+            "longitude": -73.4394377,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 15340,
+                    "ta7": 4470
+                }
+            }
+        },
+        {
+            "id": 5959,
+            "establishment": 70065,
+            "name_fr": "Centre de vaccination covid (SNT) RODI - AstraZeneca",
+            "name_en": "Centre de vaccination covid (SNT) RODI - AstraZeneca",
+            "formatted_address": "1100 route Marie-Victorin, Longueuil, J4G 2H9",
+            "latitude": 45.5568583,
+            "longitude": -73.4943919,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5961,
+            "establishment": 70067,
+            "name_fr": "Site de vaccination mobile d'Acton - AstraZeneca",
+            "name_en": "Site de vaccination mobile d'Acton - AstraZeneca",
+            "formatted_address": "1505 3e Avenue, Acton Vale, J0H 1A0",
+            "latitude": 45.6558942,
+            "longitude": -72.5735778,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5962,
+            "establishment": 70068,
+            "name_fr": "Centre de vaccination covid (SNT) Sorel (Complexe 180) - AstraZeneca",
+            "name_en": "Centre de vaccination covid (SNT) Sorel (Complexe 180) - AstraZeneca",
+            "formatted_address": "180 rue Victoria, suite 101, Sorel-Tracy, J3P 5N6",
+            "latitude": 46.0400486,
+            "longitude": -73.1050654,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 13335,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5963,
+            "establishment": 70069,
+            "name_fr": "Centre de vaccination covid (SNT) La COOP - AstraZeneca",
+            "name_en": "Centre de vaccination covid (SNT) La COOP - AstraZeneca",
+            "formatted_address": "2740 avenue Beauparlant, Saint-Hyacinthe, J2S 4M8",
+            "latitude": 45.6367681,
+            "longitude": -72.9572776,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5964,
+            "establishment": 70070,
+            "name_fr": "Site de vaccination de Saint-Bruno - AstraZeneca",
+            "name_en": "Site de vaccination de Saint-Bruno - AstraZeneca",
+            "formatted_address": "530 boulevard Clairevue Ouest, Saint-Bruno-de-Montarville, J3V 6E1",
+            "latitude": 45.520665,
+            "longitude": -73.3604078,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        },
+        {
+            "id": 5965,
+            "establishment": 70071,
+            "name_fr": "Site de vaccination mobile Saint-Hilaire - AstraZeneca",
+            "name_en": "Site de vaccination mobile Saint-Hilaire - AstraZeneca",
+            "formatted_address": "99 rue du Centre-Civique, Saint-Hilaire, J3H 3M8",
+            "latitude": 45.5639709,
+            "longitude": -73.1910989,
+            "is_virtual": 0,
+            "availabilities": {
+                "su237": {
+                    "t07": 0,
+                    "ta7": 0
+                }
+            }
+        }
+    ],
+    "distanceByPlaces": {
+        "2912": 20,
+        "2892": 5,
+        "2935": 78,
+        "1973": 61,
+        "1974": 60,
+        "1975": 76,
+        "1976": 85,
+        "2891": 145,
+        "6531": 232,
+        "6527": 93,
+        "4144": 10,
+        "4166": 4,
+        "4859": 62,
+        "4858": 61,
+        "3880": 72,
+        "4057": 83,
+        "4171": 58,
+        "3377": 72,
+        "3392": 75,
+        "4193": 3,
+        "4324": 3,
+        "3735": 4,
+        "4230": 3,
+        "4268": 4,
+        "4270": 3,
+        "4274": 3,
+        "4284": 10,
+        "5890": 5,
+        "5891": 20,
+        "6535": 715,
+        "6387": 22,
+        "6029": 3,
+        "5873": 3,
+        "2035": 63,
+        "2036": 60,
+        "2037": 43,
+        "2038": 22,
+        "2039": 56,
+        "2041": 42,
+        "2042": 34,
+        "2043": 34,
+        "2044": 79,
+        "2882": 62,
+        "2942": 103,
+        "2940": 71,
+        "2943": 90,
+        "2941": 124,
+        "5918": 62,
+        "5919": 111,
+        "5920": 60,
+        "5926": 56,
+        "5959": 63,
+        "5961": 34,
+        "5962": 79,
+        "5963": 34,
+        "5964": 52,
+        "5965": 42
+    },
+    "serviceIdsByPlaces": {
+        "2912": [
+            2484,
+            2485
+        ],
+        "2892": [
+            2486,
+            2487
+        ],
+        "2935": [
+            2490,
+            2491
+        ],
+        "1973": [
+            2492,
+            2493
+        ],
+        "1974": [
+            2494,
+            2495
+        ],
+        "1975": [
+            2496,
+            2497
+        ],
+        "1976": [
+            2498,
+            2499
+        ],
+        "2891": [
+            2500,
+            2501
+        ],
+        "6531": [
+            2512,
+            2513
+        ],
+        "6527": [
+            2542,
+            2543
+        ],
+        "4144": [
+            4557,
+            4558
+        ],
+        "4166": [
+            4601,
+            4602
+        ],
+        "4859": [
+            5903,
+            5904
+        ],
+        "4858": [
+            5901,
+            5902
+        ],
+        "3880": [
+            4029,
+            4030
+        ],
+        "4057": [
+            4383,
+            4384
+        ],
+        "4171": [
+            4611,
+            4612
+        ],
+        "3377": [
+            3259,
+            3260
+        ],
+        "3392": [
+            3293,
+            3294
+        ],
+        "4193": [
+            4655,
+            4656
+        ],
+        "4324": [
+            4917,
+            4918
+        ],
+        "3735": [
+            3744,
+            3745
+        ],
+        "4230": [
+            4729,
+            4730
+        ],
+        "4268": [
+            4805,
+            4806
+        ],
+        "4270": [
+            4809,
+            4810
+        ],
+        "4274": [
+            4817,
+            4818
+        ],
+        "4284": [
+            4837,
+            4838
+        ],
+        "5890": [
+            6253,
+            6254
+        ],
+        "5891": [
+            6255,
+            6256
+        ],
+        "6535": [
+            6285,
+            6286
+        ],
+        "6387": [
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136,
+            7135,
+            7136
+        ],
+        "6029": [
+            6497,
+            6498
+        ],
+        "5873": [
+            6219,
+            6220
+        ],
+        "2035": [
+            2616,
+            2617
+        ],
+        "2036": [
+            2618,
+            2619
+        ],
+        "2037": [
+            2620,
+            2621
+        ],
+        "2038": [
+            2622,
+            2623
+        ],
+        "2039": [
+            2624,
+            2625
+        ],
+        "2041": [
+            2628,
+            2629
+        ],
+        "2042": [
+            2630,
+            2631
+        ],
+        "2043": [
+            2632,
+            2633
+        ],
+        "2044": [
+            2634,
+            2635
+        ],
+        "2882": [
+            2636,
+            2637
+        ],
+        "2942": [
+            2638,
+            2639
+        ],
+        "2940": [
+            2640,
+            2641
+        ],
+        "2943": [
+            2642,
+            2643
+        ],
+        "2941": [
+            2644,
+            2645
+        ],
+        "5918": [
+            6309,
+            6310
+        ],
+        "5919": [
+            6311,
+            6312
+        ],
+        "5920": [
+            6313,
+            6314
+        ],
+        "5926": [
+            6323,
+            6324
+        ],
+        "5959": [
+            6357,
+            6358
+        ],
+        "5961": [
+            6361,
+            6362
+        ],
+        "5962": [
+            6363,
+            6364
+        ],
+        "5963": [
+            6365,
+            6366
+        ],
+        "5964": [
+            6367,
+            6368
+        ],
+        "5965": [
+            6369,
+            6370
+        ]
+    }
+}
