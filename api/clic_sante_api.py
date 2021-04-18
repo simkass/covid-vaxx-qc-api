@@ -1,7 +1,8 @@
 import ast
 import json
-import requests
 from datetime import datetime
+
+import requests
 
 
 def get_establishments(postal_code: str):

@@ -1,72 +1,109 @@
 import json
-import numpy as np
 from datetime import datetime
-from api.clic_sante_api import get_establishments, get_establishment_days, get_establishment_schedule
+
+import numpy as np
+
+from api.clic_sante_api import (get_establishment_days,
+                                get_establishment_schedule, get_establishments)
+from api.covid_vaxx_qc_api import (get_establishment_place_id,
+                                   get_place_service_id, post_establishments_of_interest,
+                                   post_user, get_establishments_of_interest)
+
 
 def choose_establishments(option, establishments):
     # Option 0, choose all establishments
-    if option==0:
+    if option == 0:
         return [establishment['id'] for establishment in establishments['establishments']]
     return []
 
+
 def choose_dates():
-    return 0 
+    return 0
 
-def merge_establishments(current_establishments, new_establishments):
-    establishments = current_establishments
 
-    current_ids = [establishments['id'] for establishments in current_establishments['establishments']]
-    new_ids = [establishments['id'] for establishments in new_establishments['establishments']]
-    new_ids = np.setdiff1d(new_ids, current_ids)
+def user_sign_up():
+    print("Enter your email address")
+    email_address = input()
+    print("Enter your postal code")
+    postal_code = input()
 
-    for new_id in new_ids:
-        establishment_to_add = next((item for item in new_establishments['establishments'] if item['id'] == new_id), None)
-        place_to_add = next((item for item in new_establishments['places'] if item['establishment'] == new_id), None)
-        dist_to_add = new_establishments['distanceByPlaces'][str(place_to_add['id'])]
-        service_to_add = new_establishments['serviceIdsByPlaces'][str(place_to_add['id'])]
+    establishments = get_establishments(postal_code)
+    post_establishments_of_interest(establishments)
 
-        establishments['establishments'].append(establishment_to_add)
-        establishments['places'].append(place_to_add)
-        establishments['distanceByPlaces'][str(place_to_add['id'])] = dist_to_add
-        establishments['serviceIdsByPlaces'][str(place_to_add['id'])] = service_to_add
-    
-    return establishments
+    print("Available establishments")
 
-def save_establishments(establishments):
-    with open('mock_db/establishments.json', 'r', encoding='utf-8') as f:
-        saved_establishments = json.load(f)
-    establishments = merge_establishments(saved_establishments, establishments)
-    with open('mock_db/establishments.json', 'w+', encoding='utf-8') as f:
-        json.dump(establishments, f, ensure_ascii=False, indent=4)
+    for establishment in establishments['establishments']:
+        print('id: ' + str(establishment['id']
+                           ) + ' - ' + establishment['name'] + ' - ' + establishment['address'] + '\n')
 
-def get_establishment_place_id(establishment_id):
-    with open('mock_db/establishments.json', 'r', encoding='utf-8') as f:
-         establishments = json.load(f)
-    place = next((item for item in establishments['places'] if item['establishment'] == establishment_id), None)
-    return place['id']
+    establishments_of_interest = []
+    picking_establishments = True
+    while picking_establishments:
+        print("Pick establishments of interest by id or by writing 0 to pick all")
+        pick = input()
+        if pick == '0':
+            picking_establishments = False
+            establishments_of_interest = [establishment['id'] for establishment in establishments['establishments']]
+        else:
+            establishments_of_interest.append(int(pick))
+            print("Continue picking establishments? (Y, N)")
+            if input() != 'Y':
+                picking_establishments = False
 
-def get_place_service_id(place_id):
-    with open('mock_db/establishments.json', 'r', encoding='utf-8') as f:
-        establishments = json.load(f)
-    return establishments['serviceIdsByPlaces'][str(place_id)][0]
+    dates_of_interest = []
+    choosing_dates = True
+    while choosing_dates:
+        print("Choose a date for which you would want to be notified in the following format: year-month-day")
+        date_str = input()
+        start_date = datetime.strptime(date_str, '%Y-%m-%d')
+        end_date = start_date
+        print("From what time are you available on that day? H:M")
+        start_time_str = input()
+        start_date = start_date.replace(hour=int(start_time_str.split(":")[0]))
+        start_date = start_date.replace(minute=int(start_time_str.split(":")[1]))
+        print("Until what time? H:M")
+        end_date_str = input()
+        end_date = end_date.replace(hour=int(end_date_str.split(":")[0]))
+        end_date = end_date.replace(minute=int(end_date_str.split(":")[1]))
+        dates_of_interest.append({'start_date': start_date, 'end_date': end_date})
+        print("Continue picking dates? (Y, N)")
+        if input() != 'Y':
+            choosing_dates = False
+
+    user = {
+        'email_address': email_address,
+        'establishments_of_interest': establishments_of_interest,
+        'dates_of_interest': dates_of_interest
+    }
+
+    post_user(user)
+
+def notify():
+    start_date = datetime(2021, 1, 1, 1, 0)
+    end_date = datetime(2023, 12, 31, 1, 0)
+    establishments = get_establishments_of_interest()
 
 
 def main():
-    email = 'test@gmail.com'
-    postal_code = 'J4B 6X0'
+    # email = 'test@gmail.com'
+    # postal_code = 'J4B 6X0'
 
-    establishments = get_establishments(postal_code)
+    # establishments = get_establishments(postal_code)
 
-    save_establishments(establishments)
+    # post_establishments(establishments)
 
-    place_id = get_establishment_place_id(70016)
-    service_id = get_place_service_id(place_id)
+    # place_id = get_establishment_place_id(70016)
+    # service_id = get_place_service_id(place_id)
 
-    chosen_places = choose_establishments(0, establishments)
+    # chosen_places = choose_establishments(0, establishments)
 
-    days = get_establishment_days(70016, place_id, service_id)
+    # days = get_establishment_days(70016, place_id, service_id)
 
-    schedule = get_establishment_schedule(70016, place_id, service_id, datetime(2021, 4, 4), datetime(2022, 10, 4))
+    # schedule = get_establishment_schedule(70016, place_id, service_id, datetime(2021, 4, 4), datetime(2022, 10, 4))
 
-if __name__=='__main__':
+    user_sign_up()
+    notify()
+
+
+if __name__ == '__main__':
     main()
