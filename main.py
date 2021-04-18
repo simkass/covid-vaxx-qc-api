@@ -1,6 +1,6 @@
 import json
 from datetime import datetime
-
+import pandas as pd
 import numpy as np
 
 from api.clic_sante_api import (get_establishment_days,
@@ -78,11 +78,33 @@ def user_sign_up():
 
     post_user(user)
 
-def notify():
-    start_date = datetime(2021, 1, 1, 1, 0)
+def get_availabilities_of_interest():
+    availabilities = []
+    start_date = datetime(2021, 4, 1, 1, 0)
     end_date = datetime(2023, 12, 31, 1, 0)
     establishments = get_establishments_of_interest()
+    for establishment in establishments['establishments']:
+        place_id = get_establishment_place_id(establishment['id'], establishments)
+        service_id = get_place_service_id(place_id, establishments)
+        establishment_schedule = get_establishment_schedule(establishment['id'], place_id, service_id, start_date, end_date)
+        if 'availabilities' in establishment_schedule:
+            availabilities = availabilities + establishment_schedule['availabilities']
+    return availabilities
 
+def identify_new_availabilities(updated_availabilities):
+    new_availabilities = []
+    with open('mock_db/availabilities.json', 'r', encoding='utf-8') as f:
+        current_availabilities = json.load(f)
+    for availability in updated_availabilities:
+        if availability not in current_availabilities:
+            new_availabilities.append(availability)
+    return new_availabilities
+
+def notify():
+    updated_availabilities = get_availabilities_of_interest()
+    new_availabilities = identify_new_availabilities(updated_availabilities)
+    with open('mock_db/availabilities.json', 'w+', encoding='utf-8') as f:
+        json.dump(updated_availabilities, f, ensure_ascii=False, indent=4)
 
 def main():
     # email = 'test@gmail.com'
@@ -101,7 +123,7 @@ def main():
 
     # schedule = get_establishment_schedule(70016, place_id, service_id, datetime(2021, 4, 4), datetime(2022, 10, 4))
 
-    user_sign_up()
+    # user_sign_up()
     notify()
 
 
