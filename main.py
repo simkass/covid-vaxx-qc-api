@@ -1,6 +1,7 @@
 import json
 import numpy as np
-from api.clic_sante_api import get_establishments, get_establishment_days
+from datetime import datetime
+from api.clic_sante_api import get_establishments, get_establishment_days, get_establishment_schedule
 
 def choose_establishments(option, establishments):
     # Option 0, choose all establishments
@@ -64,6 +65,8 @@ def main():
     chosen_places = choose_establishments(0, establishments)
 
     days = get_establishment_days(70016, place_id, service_id)
+
+    schedule = get_establishment_schedule(70016, place_id, service_id, datetime(2021, 4, 4), datetime(2022, 10, 4))
 
 if __name__=='__main__':
     main()
