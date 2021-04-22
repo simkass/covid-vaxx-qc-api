@@ -16,5 +16,6 @@ def hello_world():
 @app.route('/establishments/')
 @cross_origin(headers=["Content-Type", "Authorization"])
 def get_establishments():
-    postal_code = request.args.get('postal_code')
-    return clic_sante_api.get_establishments(postal_code)
+    postal_code = request.args.get('postal_code').replace(" ", "")
+    location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
+    return clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
