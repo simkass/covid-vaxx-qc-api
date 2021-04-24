@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 
 from api import clic_sante_api
+from api import db_client
 
 app = Flask(__name__)
 CORS(app)
@@ -20,6 +21,7 @@ def get_establishments():
     location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
     return clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
 
+
 @app.route('/user', methods=['POST'])
 @cross_origin(headers=["Content-Type"])
 def post_user():
@@ -27,7 +29,5 @@ def post_user():
     email_address = response['email']
     establishments_of_interest = response['establishments']
     availabilities = response['availabilities']
-    print(email_address)
-    print(establishments_of_interest)
-    print(availabilities)
+    db_client.add_user(email_address, establishments_of_interest, availabilities)
     return ''

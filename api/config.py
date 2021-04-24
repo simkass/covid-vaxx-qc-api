@@ -1,4 +1,12 @@
-auth_token = ''
+# MONGO DB CLIENT PARAMETERS
+mongo_user = 'admin'
+mongo_pswd = ''
+mongo_db = 'covid-vaxx-qc'
+mongo_connection_string = "mongodb+srv://" + mongo_user + ":" + mongo_pswd + \
+    "@cluster0.jtuj5.mongodb.net/" + mongo_db + "?retryWrites=true&w=majority"
+
+# CLIC SANTE API PARAMETERS
+auth_token = 'cHVibGljQHRyaW1vei5jb206MTIzNDU2Nzgh'
 
 headers = {
     'authority': 'api3.clicsante.ca',
