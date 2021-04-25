@@ -30,3 +30,5 @@ geocode_url_start = 'https://api3.clicsante.ca/v3/geocode?address='
 
 establishments_url_start = "https://api3.clicsante.ca/v3/availabilities?dateStart=2021-04-17&dateStop=2023-08-15&latitude="
 establishments_url_end = "&maxDistance=40&serviceUnified=237&postalCode="
+
+establishments_service_url = "https://api3.clicsante.ca/v3/establishments/"

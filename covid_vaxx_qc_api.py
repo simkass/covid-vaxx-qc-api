@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
+from requests.api import get
 
 from api import clic_sante_api
 from api import db_client
@@ -27,7 +28,10 @@ def get_establishments():
 def post_user():
     response = request.get_json()
     email_address = response['email']
+    postal_code = response['postalCode']
     establishments_of_interest = response['establishments']
     availabilities = response['availabilities']
     db_client.add_user(email_address, establishments_of_interest, availabilities)
+    db_client.update_establishments(postal_code, establishments_of_interest)
     return ''
+
