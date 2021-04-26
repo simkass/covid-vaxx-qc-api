@@ -21,4 +21,7 @@ def get_establishments(postal_code: str, lat: int, lng: int):
 def get_establishment_service(establishment_id):
     url = config.establishments_service_url + str(establishment_id) + "/services"
     response = json.loads(requests.request("GET", url, headers=config.headers, data={}).text)
-    return next(service for service in response if service['service_template']['id'] == 126)['id']
+    service = next((service for service in response if service['service_template']['id'] in [126, 159]), None)
+    if service is not None:
+        return service['id']
+    return 0

@@ -1,3 +1,8 @@
+# EMAIL CLIENT PARAMETERS
+email_address = 'alertevaccinqc@gmail.com'
+email_password = ''
+smtpsrv = "smtp.gmail.com"
+
 # MONGO DB CLIENT PARAMETERS
 mongo_user = 'admin'
 mongo_pswd = ''
