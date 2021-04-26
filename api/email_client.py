@@ -27,8 +27,8 @@ def send_sign_up_email(sendto, establishments_of_interest, establishments, avail
 
     for availabilitie in availabilities:
 
-        start_date, start_time = utils.get_datetime_strings(availabilitie['start_datetime'])
-        end_date, end_time = utils.get_datetime_strings(availabilitie['end_datetime'])
+        start_date, start_time = utils.get_datetime_strings(availabilitie['start'])
+        end_date, end_time = utils.get_datetime_strings(availabilitie['stop'])
 
         msg = msg + """<p>Du """ + start_date + " à " + start_time + " jusqu'au " + end_date + " à " + end_time + """</p>"""
 
@@ -46,7 +46,7 @@ def send_sign_up_email(sendto, establishments_of_interest, establishments, avail
     smtpserver.quit()
 
 
-def send_notification_email():
+def send_notification_email(sendto, availabilities, establishments):
     pass
 
 

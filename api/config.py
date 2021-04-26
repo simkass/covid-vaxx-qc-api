@@ -37,3 +37,7 @@ establishments_url_start = "https://api3.clicsante.ca/v3/availabilities?dateStar
 establishments_url_end = "&maxDistance=40&serviceUnified=237&postalCode="
 
 establishments_service_url = "https://api3.clicsante.ca/v3/establishments/"
+
+availabilities_url_start = "https://api3.clicsante.ca/v3/establishments/"
+availabilities_url_mid = "/schedules/day?dateStart=2021-01-01&dateStop=2022-12-31&service="
+availabilities_url_last = "&timezone=America/Toronto&places="

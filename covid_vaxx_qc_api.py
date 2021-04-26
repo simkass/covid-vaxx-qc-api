@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 from requests.api import get
 
-from api import clic_sante_api, db_client, email_client
+from api import clic_sante_api, db_client, email_client, utils
 
 app = Flask(__name__)
 CORS(app)
@@ -40,3 +40,13 @@ def post_user():
 
     email_client.send_sign_up_email(email_address, establishments_of_interest, new_establishments, availabilities)
     return ''
+
+def notify_users():
+    establishments = db_client.get_establishments()
+    previous_availabilities = db_client.get_availabilities()
+    current_availabilities = clic_sante_api.get_availabilities(establishments)
+    new_availabilities = utils.identify_new_availabilities(previous_availabilities, current_availabilities)
+    for user in db_client.get_users():
+        availabilities = current_availabilities if user['new_user'] else new_availabilities
+        availabilities_of_interest = utils.identify_availabilities_of_interest(availabilities, user)
+        email_client.send_notification_email(user['email_address'], availabilities_of_interest, establishments)

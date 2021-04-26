@@ -25,3 +25,16 @@ def get_establishment_service(establishment_id):
     if service is not None:
         return service['id']
     return 0
+
+
+def get_availabilities(establishments):
+    availabilities = []
+
+    for establishment in establishments:
+        service = get_establishment_service(establishment['establishment'])
+        url = config.availabilities_url_start + establishment['establishment'] + config.availabilities_url_mid + \
+            service + config.availabilities_url_last + establishment['id'] + "&filter1=1&filter2=0"
+        response = requests.request("GET", url, headers=config.headers, data={})
+        availabilities.append(json.loads(response.text))
+        
+    return availabilities
