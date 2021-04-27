@@ -32,9 +32,10 @@ def get_availabilities(establishments):
 
     for establishment in establishments:
         service = get_establishment_service(establishment['establishment'])
-        url = config.availabilities_url_start + establishment['establishment'] + config.availabilities_url_mid + \
-            service + config.availabilities_url_last + establishment['id'] + "&filter1=1&filter2=0"
+        url = config.availabilities_url_start + str(establishment['establishment']) + config.availabilities_url_mid + \
+            str(service) + config.availabilities_url_last + str(establishment['id']) + "&filter1=1&filter2=0"
         response = requests.request("GET", url, headers=config.headers, data={})
-        availabilities.append(json.loads(response.text))
+        if response.status_code == 200:
+            availabilities = availabilities + json.loads(response.text)['availabilities']
         
     return availabilities

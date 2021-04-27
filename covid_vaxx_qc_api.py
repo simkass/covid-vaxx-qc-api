@@ -49,4 +49,4 @@ def notify_users():
     for user in db_client.get_users():
         availabilities = current_availabilities if user['new_user'] else new_availabilities
         availabilities_of_interest = utils.identify_availabilities_of_interest(availabilities, user)
-        email_client.send_notification_email(user['email_address'], availabilities_of_interest, establishments)
+        email_client.send_notification_email(user, availabilities_of_interest, establishments)

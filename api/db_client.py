@@ -40,12 +40,12 @@ def update_establishments(establishments_of_interest, new_establishments):
 
 
 def get_users():
-    return dumps(list(users_collection.find({})), indent=2)
+    return list(users_collection.find({}))
 
 
 def get_establishments():
-    return dumps(list(establishments_collection.find({})), indent=2)
+    return list(establishments_collection.find({}))
 
 
 def get_availabilities():
-    return dumps(list(availabilities_collection.find({})), indent=2)
+    return list(availabilities_collection.find({}))
