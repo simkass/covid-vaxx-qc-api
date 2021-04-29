@@ -9,6 +9,7 @@ db = client['covid-vaxx-qc']
 users_collection = db['users']
 establishments_collection = db['establishments']
 availabilities_collection = db['availabilities']
+pending_unsubscription = db['pending-unsubscriptions']
 
 
 def add_user(email_address, establishments_of_interest, availabilities):
@@ -49,3 +50,15 @@ def get_establishments():
 
 def get_availabilities():
     return list(availabilities_collection.find({}))
+
+
+def add_pending_unsubscription(email_address, random_code):
+    pending_unsubscription.insert_one({'email_address': email_address, 'random_code': random_code})
+
+
+def unsubscribe(email_address, random_code):
+    if pending_unsubscription.count_documents({'email_address': email_address, 'random_code': random_code}) != 0:
+        pending_unsubscription.remove({'email_address': email_address})
+        users_collection.remove({'email_address': email_address})
+        return True
+    return False

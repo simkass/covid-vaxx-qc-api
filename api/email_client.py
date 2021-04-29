@@ -1,3 +1,4 @@
+from random import random
 import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -72,9 +73,32 @@ def send_notification_email(user, availabilities, establishments):
     smtpserver.quit()
 
 
-def send_unsubscription_request():
-    pass
+def send_unsubscription_request(email_address, random_code):
+    message = MIMEMultipart("alternative")
+    message["Subject"] = "Code de confirmation pour vous désabonner"
+    message["From"] = config.email_address
+    message["To"] = email_address
+
+    msg = """<html><body><p>Voici votre code de confirmation pour vous désabonner du service Alerte Vaccin QC:</p>"""
+    msg = msg + """<h1>""" + str(random_code) + """</h1></body></html>"""
+
+    html = MIMEText(msg, "html")
+    message.attach(html)
+
+    smtpserver.sendmail(config.email_address, email_address, message.as_string())
+    smtpserver.quit()
 
 
-def send_unsubscription_confirmation():
-    pass
+def send_unsubscription_confirmation(email_address):
+    message = MIMEMultipart("alternative")
+    message["Subject"] = "Confirmation de votre désabonnement"
+    message["From"] = config.email_address
+    message["To"] = email_address
+
+    msg = """<html><body><p>Vous venez de vous désabonner au service Alerte Vaccin QC</p></body></html>"""
+
+    html = MIMEText(msg, "html")
+    message.attach(html)
+
+    smtpserver.sendmail(config.email_address, email_address, message.as_string())
+    smtpserver.quit()

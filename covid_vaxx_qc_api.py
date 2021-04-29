@@ -1,3 +1,5 @@
+from random import randint
+
 from flask import Flask, jsonify, request
 from flask_cors import CORS, cross_origin
 from requests.api import get
@@ -23,7 +25,7 @@ def get_establishments():
 
 
 @app.route('/user', methods=['POST'])
-@cross_origin(headers=["Content-Type"])
+@cross_origin(headers=["Content-Type", "Authorization"])
 def post_user():
     response = request.get_json()
 
@@ -41,6 +43,31 @@ def post_user():
     email_client.send_sign_up_email(email_address, establishments_of_interest, new_establishments, availabilities)
     return ''
 
+
+@app.route('/unsubscribe-request', methods=['POST'])
+@cross_origin(headers=["Content-Type", "Authorization"])
+def unsubscription_request():
+    response = request.get_json()
+    email_address = response['email']
+    random_code = randint(1000, 9999)
+    db_client.add_pending_unsubscription(email_address, random_code)
+    email_client.send_unsubscription_request(email_address, random_code)
+    return ''
+
+
+@app.route('/unsubscribe', methods=['POST'])
+@cross_origin(headers=["Content-Type", "Authorization"])
+def unsubscribe():
+    response = request.get_json()
+    email_address = response['email']
+    random_code = response['random_code']
+    if db_client.unsubscribe(email_address, random_code):
+        email_client.send_unsubscription_confirmation(email_address)
+    return ''
+
+
+@app.route('/notify', methods=['POST'])
+@cross_origin(headers=["Content-Type", "Authorization"])
 def notify_users():
     establishments = db_client.get_establishments()
     previous_availabilities = db_client.get_availabilities()
@@ -50,3 +77,4 @@ def notify_users():
         availabilities = current_availabilities if user['new_user'] else new_availabilities
         availabilities_of_interest = utils.identify_availabilities_of_interest(availabilities, user)
         email_client.send_notification_email(user, availabilities_of_interest, establishments)
+    return ''
