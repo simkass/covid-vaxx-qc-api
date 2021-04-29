@@ -11,12 +11,6 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route('/')
-@cross_origin(headers=["Content-Type", "Authorization"])
-def hello_world():
-    return jsonify({'message': 'Api Works!'})
-
-
 @app.route('/establishments/', methods=['GET'])
 @cross_origin(headers=["Content-Type", "Authorization"])
 def get_establishments():
