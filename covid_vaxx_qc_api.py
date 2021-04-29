@@ -1,3 +1,4 @@
+import json
 from random import randint
 
 from flask import Flask, jsonify, request
@@ -41,7 +42,7 @@ def post_user():
     db_client.update_establishments(establishments_of_interest, new_establishments)
 
     email_client.send_sign_up_email(email_address, establishments_of_interest, new_establishments, availabilities)
-    return ''
+    return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
 
 
 @app.route('/unsubscribe-request', methods=['POST'])
@@ -52,7 +53,7 @@ def unsubscription_request():
     random_code = randint(1000, 9999)
     db_client.add_pending_unsubscription(email_address, random_code)
     email_client.send_unsubscription_request(email_address, random_code)
-    return ''
+    return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
 
 
 @app.route('/unsubscribe', methods=['POST'])
@@ -63,7 +64,7 @@ def unsubscribe():
     random_code = response['random_code']
     if db_client.unsubscribe(email_address, random_code):
         email_client.send_unsubscription_confirmation(email_address)
-    return ''
+    return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
 
 
 @app.route('/notify', methods=['POST'])
@@ -77,4 +78,4 @@ def notify_users():
         availabilities = current_availabilities if user['new_user'] else new_availabilities
         availabilities_of_interest = utils.identify_availabilities_of_interest(availabilities, user)
         email_client.send_notification_email(user, availabilities_of_interest, establishments)
-    return ''
+    return json.dumps({'success':True}), 200, {'ContentType':'application/json'} 
