@@ -53,7 +53,10 @@ def get_availabilities():
 
 
 def add_pending_unsubscription(email_address, random_code):
-    pending_unsubscription.insert_one({'email_address': email_address, 'random_code': random_code})
+    if users_collection.count_documents({ "email_address": email_address }) != 0:
+        pending_unsubscription.insert_one({'email_address': email_address, 'random_code': random_code})
+        return True
+    return False
 
 
 def unsubscribe(email_address, random_code):

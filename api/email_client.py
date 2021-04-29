@@ -5,15 +5,19 @@ from email.mime.text import MIMEText
 
 from api import config, utils
 
-smtpsrv = "smtp.gmail.com"
 
-smtpserver = smtplib.SMTP(smtpsrv, 587)
-smtpserver.ehlo()
-smtpserver.starttls()
-smtpserver.login(config.email_address, config.email_password)
+def email_login():
+    smtpsrv = "smtp.gmail.com"
+
+    smtpserver = smtplib.SMTP(smtpsrv, 587)
+    smtpserver.ehlo()
+    smtpserver.starttls()
+    smtpserver.login(config.email_address, config.email_password)
+    return smtpserver
 
 
 def send_sign_up_email(sendto, establishments_of_interest, establishments, availabilities):
+    smtpserver = email_login()
     message = MIMEMultipart("alternative")
     message["Subject"] = "Vous venez de vous abonner à Alerte Vaccin QC"
     message["From"] = config.email_address
@@ -48,6 +52,7 @@ def send_sign_up_email(sendto, establishments_of_interest, establishments, avail
 
 
 def send_notification_email(user, availabilities, establishments):
+    smtpserver = email_login()
     message = MIMEMultipart("alternative")
     message["Subject"] = "Ces rendez-vous de vaccination pourraient vous intéresser"
     message["From"] = config.email_address
@@ -74,6 +79,7 @@ def send_notification_email(user, availabilities, establishments):
 
 
 def send_unsubscription_request(email_address, random_code):
+    smtpserver = email_login()
     message = MIMEMultipart("alternative")
     message["Subject"] = "Code de confirmation pour vous désabonner"
     message["From"] = config.email_address
@@ -90,6 +96,7 @@ def send_unsubscription_request(email_address, random_code):
 
 
 def send_unsubscription_confirmation(email_address):
+    smtpserver = email_login()
     message = MIMEMultipart("alternative")
     message["Subject"] = "Confirmation de votre désabonnement"
     message["From"] = config.email_address
