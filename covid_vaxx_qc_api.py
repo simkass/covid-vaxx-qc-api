@@ -49,7 +49,6 @@ def unsubscription_request():
         email_client.send_unsubscription_request(email_address, random_code)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     else:
-        email_client.send_unsubscription_confirmation(email_address)
         return json.dumps({'success': False}), 200, {'ContentType': 'application/json'}
 
 
