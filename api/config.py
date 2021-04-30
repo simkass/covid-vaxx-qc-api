@@ -1,11 +1,13 @@
+import os
+
 # EMAIL CLIENT PARAMETERS
 email_address = 'alertevaccinqc@gmail.com'
-email_password = ''
+email_password = os.getenv('EMAIL_PSWD')
 smtpsrv = "smtp.gmail.com"
 
 # MONGO DB CLIENT PARAMETERS
 mongo_user = 'admin'
-mongo_pswd = ''
+mongo_pswd = os.getenv('MONGO_PSWD')
 mongo_db = 'covid-vaxx-qc'
 mongo_connection_string = "mongodb+srv://" + mongo_user + ":" + mongo_pswd + \
     "@cluster0.jtuj5.mongodb.net/" + mongo_db + "?retryWrites=true&w=majority"
@@ -39,5 +41,5 @@ establishments_url_end = "&maxDistance=40&serviceUnified=237&postalCode="
 establishments_service_url = "https://api3.clicsante.ca/v3/establishments/"
 
 availabilities_url_start = "https://api3.clicsante.ca/v3/establishments/"
-availabilities_url_mid = "/schedules/day?dateStart=2021-01-01&dateStop=2022-12-31&service="
+availabilities_url_mid = "/schedules/day?dateStart=2021-04-01&dateStop=2022-12-31&service="
 availabilities_url_last = "&timezone=America/Toronto&places="

@@ -1,0 +1,1 @@
+web: gunicorn app:covid_vaxx_qc_api --preload
