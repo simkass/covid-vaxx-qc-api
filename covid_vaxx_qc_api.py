@@ -76,3 +76,7 @@ def notify_users():
         availabilities_of_interest = utils.identify_availabilities_of_interest(availabilities, user)
         email_client.send_notification_email(user, availabilities_of_interest, establishments)
     return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+
+
+if __name__ == '__main__':
+    app.run()
