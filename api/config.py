@@ -12,6 +12,9 @@ mongo_db = 'covid-vaxx-qc'
 mongo_connection_string = "mongodb+srv://" + mongo_user + ":" + mongo_pswd + \
     "@cluster0.jtuj5.mongodb.net/" + mongo_db + "?retryWrites=true&w=majority"
 
+# RECAPTCHA PARAMETERS
+recaptcha_secret = os.getenv("RECAPTCHA_SECRET")
+
 # CLIC SANTE API PARAMETERS
 auth_token = 'cHVibGljQHRyaW1vei5jb206MTIzNDU2Nzgh'
 
