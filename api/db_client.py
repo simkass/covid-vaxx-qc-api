@@ -29,6 +29,17 @@ def add_user(email_address, establishments_of_interest, availabilities):
              'availabilities': availabilities, 'new_user': True})
 
 
+def switch_new_user(email_address):
+    existing_user = users_collection.find({'email_address': email_address})
+    establishments_of_interest = list(set(existing_user[0]['establishments_of_interest']))
+    availabilities = existing_user[0]['availabilities']
+
+    users_collection.update(
+        {'email_address': email_address},
+        {'email_address': email_address, 'establishments_of_interest': establishments_of_interest,
+         'availabilities': availabilities, 'new_user': False})
+
+
 def update_establishments(establishments_of_interest, new_establishments):
     new_places = new_establishments['places']
 
@@ -52,8 +63,14 @@ def get_availabilities():
     return list(availabilities_collection.find({}))
 
 
+def update_availabilities(availabilities):
+    availabilities_collection.remove({})
+    for availability in availabilities:
+        availabilities_collection.insert_one(availability)
+
+
 def add_pending_unsubscription(email_address, random_code):
-    if users_collection.count_documents({ "email_address": email_address }) != 0:
+    if users_collection.count_documents({"email_address": email_address}) != 0:
         pending_unsubscription.insert_one({'email_address': email_address, 'random_code': random_code})
         return True
     return False
