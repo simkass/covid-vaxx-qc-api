@@ -11,11 +11,30 @@ def get_geo_code(postal_code: str):
     return json.loads(response.text)
 
 
-def get_establishments(postal_code: str, lat: int, lng: int):
-    url = config.establishments_url_start + str(lat) + "&longitude=" + str(
-        lng) + config.establishments_url_end + postal_code[0:3] + "%20" + postal_code[3:6]
-    response = requests.request("GET", url, headers=config.headers, data={})
-    return json.loads(response.text)
+def get_establishments(postal_code, lat, lng):
+    page = 0
+    establishments_full = {"establishments": [], "places": [], "distanceByPlaces": [], "serviceIdsByPlaces": []}
+
+    while(page < 5):
+
+        url = config.establishments_url_start + str(lat) + "&longitude=" + str(
+            lng) + config.establishments_url_end + postal_code[0:3] + "%20" + postal_code[3:6] + "&page=" + str(page)
+        response = requests.request("GET", url, headers=config.headers, data={})
+
+        if response.text != '':
+            establishments = json.loads(response.text)
+            establishments_full = merge_establishments(establishments_full, establishments)
+            page += 1
+        else:
+            page = 5
+
+    return establishments_full
+
+
+def merge_establishments(est1, est2):
+    return {"establishments": est1['establishments'] + est2['establishments'],
+            "places": est1['places'] + est2['places'],
+            "distanceByPlaces": [], "serviceIdsByPlaces": []}
 
 
 def get_establishment_service(establishment_id):
@@ -37,5 +56,5 @@ def get_availabilities(establishments):
         response = requests.request("GET", url, headers=config.headers, data={})
         if response.status_code == 200:
             availabilities = availabilities + json.loads(response.text)['availabilities']
-        
+
     return availabilities
