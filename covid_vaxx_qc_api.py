@@ -1,11 +1,11 @@
 import json
 from random import randint
 
-from flask import Flask, jsonify, request
+import requests
+from flask import Flask, request
 from flask_cors import CORS, cross_origin
-from requests.api import get
 
-from api import clic_sante_api, db_client, email_client, utils
+from api import clic_sante_api, config, db_client, email_client
 
 app = Flask(__name__)
 CORS(app)
@@ -24,19 +24,27 @@ def get_establishments():
 def post_user():
     response = request.get_json()
 
-    email_address = response['email']
-    postal_code = response['postalCode'].replace(" ", "")
-    establishments_of_interest = response['establishments']
-    availabilities = response['availabilities']
+    recaptcha_validation = requests.post("https://www.google.com/recaptcha/api/siteverify",
+                                         params={"secret": config.recaptcha_secret, "response": response['recaptcha']})
 
-    db_client.add_user(email_address, establishments_of_interest, availabilities)
+    recaptcha_validation = json.loads(recaptcha_validation.text)
 
-    location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
-    new_establishments = clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
-    db_client.update_establishments(establishments_of_interest, new_establishments)
+    if not recaptcha_validation['success']:
+        return "Recaptcha validation failed", 400
+    else:
+        email_address = response['email']
+        postal_code = response['postalCode'].replace(" ", "")
+        establishments_of_interest = response['establishments']
+        availabilities = response['availabilities']
 
-    email_client.send_sign_up_email(email_address, establishments_of_interest, new_establishments, availabilities)
-    return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+        db_client.add_user(email_address, establishments_of_interest, availabilities)
+
+        location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
+        new_establishments = clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
+        db_client.update_establishments(establishments_of_interest, new_establishments)
+
+        email_client.send_sign_up_email(email_address, establishments_of_interest, new_establishments, availabilities)
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 
 @app.route('/unsubscribe-request', methods=['POST'])
@@ -49,7 +57,7 @@ def unsubscription_request():
         email_client.send_unsubscription_request(email_address, random_code)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
     else:
-        return json.dumps({'success': False}), 200, {'ContentType': 'application/json'}
+        return "User doesn't exist in our database. Considered it to be unsubscribed", 400
 
 
 @app.route('/unsubscribe', methods=['POST'])
@@ -61,7 +69,7 @@ def unsubscribe():
     if db_client.unsubscribe(email_address, random_code):
         email_client.send_unsubscription_confirmation(email_address)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    return json.dumps({'success': False}), 200, {'ContentType': 'application/json'}
+    return "User doesn't exist in our database. Considered it to be unsubscribed", 400
 
 
 if __name__ == '__main__':
