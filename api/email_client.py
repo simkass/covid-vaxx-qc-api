@@ -82,6 +82,8 @@ def send_notification_email(user, availabilities, establishments):
                         previous_start_date = start_date
                     msg = msg + start_time + ", "
 
+    msg = msg + """<h3>Pour réserver un rendez-vous, visitez <a href='https://portal3.clicsante.ca/'>Clic-Santé</a>.</h3>"""
+
     msg = msg + """<p><b>Alerte Vaccin QC</b></p></body></html>"""
 
     html = MIMEText(msg, "html")
