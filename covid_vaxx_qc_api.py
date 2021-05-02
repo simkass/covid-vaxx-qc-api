@@ -56,8 +56,10 @@ def unsubscription_request():
     if db_client.add_pending_unsubscription(email_address, random_code):
         email_client.send_unsubscription_request(email_address, random_code)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    else:
-        return "User doesn't exist in our database. Considered it to be unsubscribed", 400
+        
+    return json.dumps({'success': False,
+                       "message": "User doesn't exist in our database. Considered it to be unsubscribed"}), 200, {
+        'ContentType': 'application/json'}
 
 
 @app.route('/unsubscribe', methods=['POST'])
@@ -69,7 +71,10 @@ def unsubscribe():
     if db_client.unsubscribe(email_address, random_code):
         email_client.send_unsubscription_confirmation(email_address)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
-    return "User doesn't exist in our database. Considered it to be unsubscribed", 400
+
+    return json.dumps({'success': False,
+                       "message": "User doesn't exist in our database. Considered it to be unsubscribed"}), 200, {
+        'ContentType': 'application/json'}
 
 
 if __name__ == '__main__':
