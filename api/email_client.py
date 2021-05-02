@@ -47,6 +47,7 @@ def send_sign_up_email(sendto, establishments_of_interest, establishments, avail
 
         msg = msg + """<h4>Du """ + start_date + " à " + start_time + " jusqu'au " + end_date + " à " + end_time + """</h4>"""
 
+    msg = msg + """<h3>Pour vous désabonner, visitez <a href='https://www.alertevaccin.ca/unsubscribe'>Alerte Vaccin</a>.</h3>"""
     msg = msg + """<p><b>Alerte Vaccin QC</b></p></body></html>"""
 
     html = MIMEText(msg, "html")
@@ -83,6 +84,7 @@ def send_notification_email(user, availabilities, establishments):
                     msg = msg + start_time + ", "
 
     msg = msg + """<h3>Pour réserver un rendez-vous, visitez <a href='https://portal3.clicsante.ca/'>Clic-Santé</a>.</h3>"""
+    msg = msg + """<h3>Pour vous désabonner, visitez <a href='https://www.alertevaccin.ca/unsubscribe'>Alerte Vaccin</a>.</h3>"""
 
     msg = msg + """<p><b>Alerte Vaccin QC</b></p></body></html>"""
 
