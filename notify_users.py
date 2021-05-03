@@ -15,14 +15,19 @@ def notify_users():
         availabilities = current_availabilities if user['new_user'] else new_availabilities
         availabilities_of_interest = utils.identify_availabilities_of_interest(availabilities, user)
 
-        if len(availabilities_of_interest) != 0:
+        if len(availabilities_of_interest) != 0 and user['hours_since_last_email'] >= 6:
             email_client.send_notification_email(user, availabilities_of_interest, establishments)
+            db_client.update_user_hours_since_last_email(user['email_address'], 0)
+        else:
+            db_client.update_user_hours_since_last_email(
+                user['email_address'],
+                min(user['hours_since_last_email'] + 1, 6))
 
         if user['new_user']:
-            db_client.switch_new_user(user['email_address'])
+            db_client.toggle_new_user(user['email_address'])
 
     db_client.update_availabilities(current_availabilities)
 
 
-schedule.add_job(notify_users, 'cron', hour='7-22')
+schedule.add_job(notify_users, 'cron', hour='11-23, 0-2')
 schedule.start()
