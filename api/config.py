@@ -5,6 +5,8 @@ email_address = 'alertevaccinqc@gmail.com'
 email_password = os.getenv('EMAIL_PSWD')
 smtpsrv = "smtp.gmail.com"
 
+notif_delay = int(os.getenv('NOTIF_DELAY'))
+
 # MONGO DB CLIENT PARAMETERS
 mongo_user = 'admin'
 mongo_pswd = os.getenv('MONGO_PSWD')

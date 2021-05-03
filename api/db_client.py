@@ -18,7 +18,7 @@ def add_user(email_address, establishments_of_interest, availabilities):
     if users_collection.count_documents({'email_address': email_address}) == 0:
         users_collection.insert_one({"email_address": email_address,
                                      "establishments_of_interest": establishments_of_interest,
-                                     "availabilities": availabilities, 'new_user': True, 'hours_since_last_email': 6})
+                                     "availabilities": availabilities, 'new_user': True, 'hours_since_last_email': config.notif_delay})
     else:
         establishments_of_interest = list(
             set(existing_user[0]['establishments_of_interest'] + establishments_of_interest))
@@ -26,7 +26,7 @@ def add_user(email_address, establishments_of_interest, availabilities):
         users_collection.update(
             {'email_address': email_address},
             {'email_address': email_address, 'establishments_of_interest': establishments_of_interest,
-             'availabilities': availabilities, 'new_user': True, 'hours_since_last_email': 6})
+             'availabilities': availabilities, 'new_user': True, 'hours_since_last_email': config.notif_delay})
 
 
 def toggle_new_user(email_address):
