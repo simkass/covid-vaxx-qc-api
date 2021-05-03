@@ -30,5 +30,5 @@ def notify_users():
     db_client.update_availabilities(current_availabilities)
 
 
-schedule.add_job(notify_users, 'cron', hour='0-3,10-23')
+schedule.add_job(notify_users, 'cron', hour='0-3,10-23', minute='0,30')
 schedule.start()
