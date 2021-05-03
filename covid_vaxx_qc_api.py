@@ -32,7 +32,7 @@ def post_user():
     if not recaptcha_validation['success']:
         return "Recaptcha validation failed", 400
     else:
-        email_address = response['email']
+        email_address = response['email'].lower()
         postal_code = response['postalCode'].replace(" ", "")
         establishments_of_interest = response['establishments']
         availabilities = response['availabilities']
@@ -51,7 +51,7 @@ def post_user():
 @cross_origin(headers=["Content-Type", "Authorization"])
 def unsubscription_request():
     response = request.get_json()
-    email_address = response['email']
+    email_address = response['email'].lower()
     random_code = randint(1000, 9999)
     if db_client.add_pending_unsubscription(email_address, random_code):
         email_client.send_unsubscription_request(email_address, random_code)
@@ -66,7 +66,7 @@ def unsubscription_request():
 @cross_origin(headers=["Content-Type", "Authorization"])
 def unsubscribe():
     response = request.get_json()
-    email_address = response['email']
+    email_address = response['email'].lower()
     random_code = int(response['random_code'])
     if db_client.unsubscribe(email_address, random_code):
         email_client.send_unsubscription_confirmation(email_address)
