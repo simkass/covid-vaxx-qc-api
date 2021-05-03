@@ -32,8 +32,9 @@ def get_datetime_full_strings(date_str):
 def identify_new_availabilities(previous_availabilities, current_availabilities):
     new_availabilties = []
     for availability in current_availabilities:
-        previous = next((a for a in previous_availabilities if a['id'] == availability['id']), None)
-        if previous is None:
+        previous = next((a for a in previous_availabilities if a['start'] == availability['start'] and a['place'] == availability['place']), None)
+        new = next((a for a in new_availabilties if a['start'] == availability['start'] and a['place'] == availability['place']), None)
+        if previous is None and new is None:
             new_availabilties.append(availability)
     return new_availabilties
 
