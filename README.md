@@ -29,9 +29,7 @@ Service to send email notifications for covid 19 vaccination availabilities in Q
 
 ---RUN THE API---
 1. Uncomment the "load_dotenv()" statement on line 5 of the config file
-
-in the terminal at the project root (If you're using a virtualenv, make sure its activated):
-2. set FLASK_APP=covid_vaxx_qc_api.py
+2. in the terminal at the project root: set FLASK_APP=covid_vaxx_qc_api.py
 3. flask run
 
 ---RUN THE NOTIFIER---
