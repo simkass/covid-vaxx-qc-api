@@ -23,7 +23,7 @@ def get_datetime_strings(date_str):
     return date_time.strftime("%m/%d/%Y"), date_time.strftime("%H:%M")
 
 
-def get_datetime_full_strings(date_str):
+def get_datetime_full_strings(date_str, convert_from_utc=False):
     date, time = get_datetime_strings(date_str)
     date_full_string = date[3:5].replace("0", "") + " " + months.get(date[0:2]) + " " + date[6:12]
     return date_full_string, time
