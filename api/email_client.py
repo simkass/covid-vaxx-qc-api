@@ -42,10 +42,13 @@ def send_sign_up_email(sendto, establishments_of_interest, establishments, avail
 
     for availability in availabilities:
 
-        start_date, start_time = utils.get_datetime_full_strings(availability['start'])
-        end_date, end_time = utils.get_datetime_full_strings(availability['stop'])
+        start_date, start_time = utils.get_datetime_full_strings(
+            availability['start'])
+        end_date, end_time = utils.get_datetime_full_strings(
+            availability['stop'])
 
-        msg = msg + """<h4>Du """ + start_date + " à " + start_time + " jusqu'au " + end_date + " à " + end_time + """</h4>"""
+        msg = msg + """<h4>Du """ + start_date + " à " + start_time + \
+            " jusqu'au " + end_date + " à " + end_time + """</h4>"""
 
     msg = msg + """<h3>Pour vous désabonner, visitez <a href='https://www.alertevaccin.ca/unsubscribe'>Alerte Vaccin</a>.</h3>"""
     msg = msg + """<p><b>Alerte Vaccin QC</b></p></body></html>"""
@@ -70,14 +73,17 @@ def send_notification_email(user, availabilities, establishments):
         if place['id'] in user['establishments_of_interest']:
 
             previous_start_date = ''
-            establishment_availabilities = [a for a in availabilities if a['establishment'] == place['establishment']]
+            establishment_availabilities = [
+                a for a in availabilities if a['establishment'] == place['establishment']]
 
             if len(establishment_availabilities) != 0:
                 msg = msg + """<p><h2>""" + place['name_fr'] + "</h2> " + \
-                            """ <i>""" + place['formatted_address'] + """</i></p>"""
+                            """ <i>""" + \
+                    place['formatted_address'] + """</i></p>"""
 
                 for availability in establishment_availabilities:
-                    start_date, start_time = utils.get_datetime_full_strings(availability['start'])
+                    start_date, start_time = utils.get_datetime_full_strings(
+                        availability['start'], True)
                     if start_date != previous_start_date:
                         msg = msg + """<h4>""" + start_date + """<h4>"""
                         previous_start_date = start_date
@@ -91,7 +97,8 @@ def send_notification_email(user, availabilities, establishments):
     html = MIMEText(msg, "html")
     message.attach(html)
 
-    smtpserver.sendmail(config.email_address, user['email_address'], message.as_string())
+    smtpserver.sendmail(config.email_address,
+                        user['email_address'], message.as_string())
     smtpserver.quit()
 
 
@@ -103,12 +110,14 @@ def send_unsubscription_request(email_address, random_code):
     message["To"] = email_address
 
     msg = """<html><body><h3>Voici votre code de confirmation pour vous désabonner du service Alerte Vaccin QC:</h3>"""
-    msg = msg + """<h1>""" + str(random_code) + """</h1><p><b>Alerte Vaccin QC</b></p></body></html>"""
+    msg = msg + """<h1>""" + \
+        str(random_code) + """</h1><p><b>Alerte Vaccin QC</b></p></body></html>"""
 
     html = MIMEText(msg, "html")
     message.attach(html)
 
-    smtpserver.sendmail(config.email_address, email_address, message.as_string())
+    smtpserver.sendmail(config.email_address,
+                        email_address, message.as_string())
     smtpserver.quit()
 
 
@@ -126,5 +135,6 @@ def send_unsubscription_confirmation(email_address):
     html = MIMEText(msg, "html")
     message.attach(html)
 
-    smtpserver.sendmail(config.email_address, email_address, message.as_string())
+    smtpserver.sendmail(config.email_address,
+                        email_address, message.as_string())
     smtpserver.quit()
