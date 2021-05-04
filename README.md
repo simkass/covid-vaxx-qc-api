@@ -18,7 +18,8 @@ Service to send email notifications for covid 19 vaccination availabilities in Q
 
 ---EMAIL---
 1. Create a throaway gmail account and make sure the "Less secure app access" setting is on
-2. In the .env file, add the gmail account password to a variable named EMAIL_PSWD
+2. In the config file, change the email address to the one you just created
+3. In the .env file, add the gmail account password to a variable named EMAIL_PSWD
 
 ---RECAPTCHA---
 1. Head to https://www.google.com/recaptcha/admin/create
