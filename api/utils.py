@@ -18,22 +18,25 @@ def get_datetime(date_str, convert_from_utc=False):
     return date_time.replace(tzinfo=to_zone)
 
 
-def get_datetime_strings(date_str):
-    date_time = get_datetime(date_str)
+def get_datetime_strings(date_str, convert_from_utc=False):
+    date_time = get_datetime(date_str, convert_from_utc)
     return date_time.strftime("%m/%d/%Y"), date_time.strftime("%H:%M")
 
 
 def get_datetime_full_strings(date_str, convert_from_utc=False):
-    date, time = get_datetime_strings(date_str)
-    date_full_string = date[3:5].replace("0", "") + " " + months.get(date[0:2]) + " " + date[6:12]
+    date, time = get_datetime_strings(date_str, convert_from_utc)
+    date_full_string = date[3:5].replace(
+        "0", "") + " " + months.get(date[0:2]) + " " + date[6:12]
     return date_full_string, time
 
 
 def identify_new_availabilities(previous_availabilities, current_availabilities):
     new_availabilties = []
     for availability in current_availabilities:
-        previous = next((a for a in previous_availabilities if a['start'] == availability['start'] and a['place'] == availability['place']), None)
-        new = next((a for a in new_availabilties if a['start'] == availability['start'] and a['place'] == availability['place']), None)
+        previous = next((a for a in previous_availabilities if a['start'] ==
+                         availability['start'] and a['place'] == availability['place']), None)
+        new = next((a for a in new_availabilties if a['start'] ==
+                    availability['start'] and a['place'] == availability['place']), None)
         if previous is None and new is None:
             new_availabilties.append(availability)
     return new_availabilties
