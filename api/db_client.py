@@ -4,7 +4,7 @@ from bson.json_util import dumps
 from api import clic_sante_api, config
 
 client = pymongo.MongoClient(config.mongo_connection_string)
-db = client['covid-vaxx-qc']
+db = client[config.mongo_db]
 
 users_collection = db['users']
 establishments_collection = db['establishments']
@@ -18,7 +18,8 @@ def add_user(email_address, establishments_of_interest, availabilities):
     if users_collection.count_documents({'email_address': email_address}) == 0:
         users_collection.insert_one({"email_address": email_address,
                                      "establishments_of_interest": establishments_of_interest,
-                                     "availabilities": availabilities, 'new_user': True, 'hours_since_last_email': config.notif_delay})
+                                     "availabilities": availabilities, 'new_user': True,
+                                     'hours_since_last_email': config.notif_delay})
     else:
         establishments_of_interest = list(
             set(existing_user[0]['establishments_of_interest'] + establishments_of_interest))
