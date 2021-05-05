@@ -40,13 +40,11 @@ def post_user():
         return "Recaptcha validation failed", 400
     else:
         email_address = response['email'].lower()
-        postal_code = response['postalCode'].replace(
-            " ", "") if response['postalCode'] else ''
+        postal_code = response['postalCode'].replace(" ", "") if response['postalCode'] else ''
         establishments_of_interest = response['establishments']
         availabilities = response['availabilities']
 
-        db_client.add_user(
-            email_address, establishments_of_interest, availabilities)
+        db_client.add_user(email_address, establishments_of_interest, availabilities)
 
         location = clic_sante_api.get_geo_code(
             postal_code)['results'][0]['geometry']['location']

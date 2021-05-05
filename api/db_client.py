@@ -32,8 +32,7 @@ def add_user(email_address, establishments_of_interest, availabilities):
 
 def toggle_new_user(email_address):
     existing_user = users_collection.find({'email_address': email_address})
-    establishments_of_interest = list(
-        set(existing_user[0]['establishments_of_interest']))
+    establishments_of_interest = list(set(existing_user[0]['establishments_of_interest']))
     availabilities = existing_user[0]['availabilities']
     hours = existing_user[0]['hours_since_last_email']
 
@@ -45,8 +44,7 @@ def toggle_new_user(email_address):
 
 def update_user_hours_since_last_email(email_address, hours):
     existing_user = users_collection.find({'email_address': email_address})
-    establishments_of_interest = list(
-        set(existing_user[0]['establishments_of_interest']))
+    establishments_of_interest = list(set(existing_user[0]['establishments_of_interest']))
     availabilities = existing_user[0]['availabilities']
     new_user = existing_user[0]['new_user']
 
@@ -61,11 +59,9 @@ def update_establishments(establishments_of_interest, new_establishments):
 
     for establishment_id in establishments_of_interest:
         if establishments_collection.count_documents({"id": establishment_id}) == 0:
-            establishment = next(
-                (place for place in new_places if place['id'] == establishment_id), None)
+            establishment = next((place for place in new_places if place['id'] == establishment_id), None)
             if establishment is not None:
-                establishment['service'] = clic_sante_api.get_establishment_service(
-                    establishment['establishment'])
+                establishment['service'] = clic_sante_api.get_establishment_service(establishment['establishment'])
                 establishments_collection.insert_one(establishment)
 
 
@@ -89,8 +85,7 @@ def update_availabilities(availabilities):
 
 def add_pending_unsubscription(email_address, random_code):
     if users_collection.count_documents({"email_address": email_address}) != 0:
-        pending_unsubscription.insert_one(
-            {'email_address': email_address, 'random_code': random_code})
+        pending_unsubscription.insert_one({'email_address': email_address, 'random_code': random_code})
         return True
     return False
 
