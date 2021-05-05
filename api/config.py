@@ -3,6 +3,10 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+from dotenv import load_dotenv
+
+# load_dotenv()  # take environment variables from .env.
+
 # EMAIL CLIENT PARAMETERS
 email_address = 'alertevaccinqc@gmail.com'
 email_password = os.getenv('EMAIL_PSWD')
