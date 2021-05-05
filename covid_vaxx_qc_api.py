@@ -46,15 +46,11 @@ def post_user():
 
         db_client.add_user(email_address, establishments_of_interest, availabilities)
 
-        location = clic_sante_api.get_geo_code(
-            postal_code)['results'][0]['geometry']['location']
-        new_establishments = clic_sante_api.get_establishments(
-            postal_code, location['lat'], location['lng'])
-        db_client.update_establishments(
-            establishments_of_interest, new_establishments)
+        location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
+        new_establishments = clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
+        db_client.update_establishments(establishments_of_interest, new_establishments)
 
-        email_client.send_sign_up_email(
-            email_address, establishments_of_interest, new_establishments, availabilities)
+        email_client.send_sign_up_email(email_address, establishments_of_interest, new_establishments, availabilities)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 
