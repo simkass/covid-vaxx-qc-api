@@ -16,7 +16,7 @@ def email_login():
     return smtpserver
 
 
-def send_sign_up_email(sendto, establishments_of_interest, establishments, availabilities):
+def send_sign_up_email(sendto, establishments_of_interest, availabilities):
     smtpserver = email_login()
     message = MIMEMultipart("alternative")
     message["Subject"] = "Abonnement à Alerte Vaccin QC"
@@ -33,10 +33,9 @@ def send_sign_up_email(sendto, establishments_of_interest, establishments, avail
                         <th>Adresse</th>
                     </tr>"""
 
-    for place in establishments['places']:
-        if place['id'] in establishments_of_interest:
-            msg = msg + """<tr><td>""" + place['name_fr'] + """</td><td>""" + \
-                place['formatted_address'] + """</td></tr>"""
+    for place in establishments_of_interest:
+        msg = msg + """<tr><td>""" + place['name_fr'] + """</td><td>""" + \
+            place['formatted_address'] + """</td></tr>"""
 
     msg = msg + """</table><h2>Disponibilités: </h2>"""
 
