@@ -49,8 +49,7 @@ def post_user():
         new_establishments = clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
         db_client.update_establishments(establishments_of_interest, new_establishments)
 
-        email_client.send_sign_up_email(
-            email_address, establishments_of_interest, new_establishments, availabilities)
+        email_client.send_sign_up_email(email_address, establishments_of_interest, new_establishments, availabilities)
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 
