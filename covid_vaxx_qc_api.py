@@ -19,8 +19,7 @@ def get_establishments():
     postal_code = request.args.get('postal_code', "").replace(" ", "")
 
     if lat == None or lng == None:
-        location = clic_sante_api.get_geo_code(
-            postal_code)['results'][0]['geometry']['location']
+        location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
         return clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
     else:
         return clic_sante_api.get_establishments(postal_code, lat, lng)
@@ -46,12 +45,9 @@ def post_user():
 
         db_client.add_user(email_address, establishments_of_interest, availabilities)
 
-        location = clic_sante_api.get_geo_code(
-            postal_code)['results'][0]['geometry']['location']
-        new_establishments = clic_sante_api.get_establishments(
-            postal_code, location['lat'], location['lng'])
-        db_client.update_establishments(
-            establishments_of_interest, new_establishments)
+        location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
+        new_establishments = clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
+        db_client.update_establishments(establishments_of_interest, new_establishments)
 
         email_client.send_sign_up_email(
             email_address, establishments_of_interest, new_establishments, availabilities)
