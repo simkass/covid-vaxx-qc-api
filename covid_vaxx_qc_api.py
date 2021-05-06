@@ -43,10 +43,10 @@ def post_user():
         availabilities = response['availabilities']
 
         db_client.add_user(email_address, establishments_of_interest, availabilities)
-
         db_client.update_establishments(establishments_of_interest)
-
+        
         email_client.send_sign_up_email(email_address, establishments_of_interest, availabilities)
+        
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 
