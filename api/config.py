@@ -13,7 +13,7 @@ notif_delay = int(os.getenv('NOTIF_DELAY'))
 # MONGO DB CLIENT PARAMETERS
 mongo_user = 'admin'
 mongo_pswd = os.getenv('MONGO_PSWD')
-mongo_db = 'dev-covid-vaxx-qc'
+mongo_db = 'covid-vaxx-qc'
 mongo_connection_string = "mongodb+srv://" + mongo_user + ":" + mongo_pswd + \
     "@cluster0.jtuj5.mongodb.net/" + mongo_db + "?retryWrites=true&w=majority"
 
