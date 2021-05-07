@@ -1,15 +1,14 @@
-from api import config
 from apscheduler.schedulers.blocking import BlockingScheduler
 
-from api import clic_sante_api, db_client, email_client, utils
+from api import clic_sante_api, config, db_client, email_client, utils
 
 schedule = BlockingScheduler()
 
 
 def notify_users():
     establishments = db_client.get_establishments()
-    previous_availabilities = db_client.get_availabilities()
     current_availabilities = clic_sante_api.get_availabilities(establishments)
+    # previous_availabilities = db_client.get_availabilities()
     # new_availabilities = utils.identify_new_availabilities(previous_availabilities, current_availabilities)
 
     for user in db_client.get_users():
