@@ -87,11 +87,12 @@ def send_notification_email(user, availabilities, establishments):
 
                 for availability in establishment_availabilities:
                     start_date, start_time = utils.get_datetime_full_strings(availability['start'], True)
-                    
 
                     if (start_date != previous_start_date and not just_started) or len(establishment_availabilities) == 1:
                         if len(start_times) > 1:
                             html_msg = html_msg + """<h4>""" + previous_start_date + " - " + "Entre " + start_times[0] + " et " + start_times[len(start_times) - 1] + """</h4>"""
+                        elif len(start_times) == 0:
+                            html_msg = html_msg + """<h4>""" + previous_start_date + " - " + start_time + """</h4>"""
                         else:
                             html_msg = html_msg + """<h4>""" + previous_start_date + " - " + start_times[0] + """</h4>"""
                         start_times = []
