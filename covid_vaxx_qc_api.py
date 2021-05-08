@@ -5,7 +5,7 @@ import requests
 from flask import Flask, request
 from flask_cors import CORS, cross_origin
 
-from api import clic_sante_api, config, db_client, email_client
+from api import clic_sante_api, config, db_client, email_client, utils
 
 app = Flask(__name__)
 CORS(app)
@@ -22,7 +22,7 @@ def get_establishments():
         location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
         return clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
     else:
-        return clic_sante_api.get_establishments(postal_code, lat, lng)
+        return clic_sante_api.get_establishments("", lat, lng)
 
 
 @app.route('/user', methods=['POST'])
@@ -39,14 +39,17 @@ def post_user():
         return "Recaptcha validation failed", 400
     else:
         email_address = response['email'].lower()
+        if not utils.validate_email_format(email_address):
+            return "Email format is invalid", 400
+
         establishments_of_interest = response['establishments']
         availabilities = response['availabilities']
 
         db_client.add_user(email_address, establishments_of_interest, availabilities)
         db_client.update_establishments(establishments_of_interest)
-        
+
         email_client.send_sign_up_email(email_address, establishments_of_interest, availabilities)
-        
+
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
 
@@ -76,7 +79,7 @@ def unsubscribe():
         return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
 
     return json.dumps({'success': False,
-                       "message": "User doesn't exist in our database. Considered it to be unsubscribed"}), 200, {
+                       "message": "Confirmation code is invalid for this user"}), 200, {
         'ContentType': 'application/json'}
 
 

@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from dateutil import tz
+from validate_email import validate_email
 
 from_zone = tz.gettz('UTC')
 to_zone = tz.gettz('America/New_York')
@@ -55,3 +56,6 @@ def identify_availabilities_of_interest(current_availabilities, user):
             availabilities_of_interest.append(availability)
 
     return availabilities_of_interest
+
+def validate_email_format(email_address):
+    return validate_email(email_address=email_address, check_blacklist=False, check_dns=False, check_smtp=False)
