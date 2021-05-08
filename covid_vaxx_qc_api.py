@@ -22,7 +22,7 @@ def get_establishments():
         location = clic_sante_api.get_geo_code(postal_code)['results'][0]['geometry']['location']
         return clic_sante_api.get_establishments(postal_code, location['lat'], location['lng'])
     else:
-        return clic_sante_api.get_establishments(postal_code, lat, lng)
+        return clic_sante_api.get_establishments("", lat, lng)
 
 
 @app.route('/user', methods=['POST'])
