@@ -13,10 +13,9 @@ def get_geo_code(postal_code: str):
 
 def get_establishments(postal_code, lat, lng):
     page = 0
-    establishments_full = {"establishments": [], "places": [], "distanceByPlaces": [], "serviceIdsByPlaces": []}
+    establishments_full = {"establishments": [], "places": [], "distanceByPlaces": {}, "serviceIdsByPlaces": []}
 
     while(page < 5):
-
         url = config.establishments_url_start + str(lat) + "&longitude=" + str(
             lng) + config.establishments_url_end + postal_code[0:3] + "%20" + postal_code[3:6] + "&page=" + str(page)
         response = requests.request("GET", url, headers=config.headers, data={})
@@ -32,9 +31,10 @@ def get_establishments(postal_code, lat, lng):
 
 
 def merge_establishments(est1, est2):
+    est1['distanceByPlaces'].update(est2['distanceByPlaces'])
     return {"establishments": est1['establishments'] + est2['establishments'],
             "places": est1['places'] + est2['places'],
-            "distanceByPlaces": [], "serviceIdsByPlaces": []}
+            "distanceByPlaces": est1['distanceByPlaces'], "serviceIdsByPlaces": []}
 
 
 def get_establishment_service(establishment_id):
