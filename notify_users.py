@@ -26,7 +26,7 @@ def notify_users():
         if user['new_user']:
             db_client.toggle_new_user(user['email_address'])
 
-    db_client.update_availabilities(current_availabilities)
+    # db_client.update_availabilities(current_availabilities)
 
 
 schedule.add_job(notify_users, 'cron', hour='0-3,10-23', minute='0,30')

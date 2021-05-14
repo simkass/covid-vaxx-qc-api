@@ -1,20 +1,20 @@
-from api import config
+from api import config, db_client
 
 import requests
 import json
 
 valid_postal_code = 'J8E%200A1'
-valid_establishment_id = '74616'
+valid_establishment_id = '60046'
 valid_longitude = '-74.568391199999994'
 valid_latitude = '46.1322197'
-valid_service_id = '6219'
-valid_place_id = '5873'
+valid_service_id = '2486'
+valid_place_id = '2892'
 
 url_geocode = config.geocode_url_start + 'J8E%200A1'
 url_establishments = config.establishments_url_start + valid_latitude + "&longitude=" + \
-                     valid_longitude + config.establishments_url_end + valid_postal_code + '&page=0'
+    valid_longitude + config.establishments_url_end + valid_postal_code + '&page=0'
 url_availabilities = config.availabilities_url_start + valid_establishment_id + config.availabilities_url_mid + \
-                     valid_service_id + config.availabilities_url_last + valid_place_id + "&filter1=1&filter2=0"
+    valid_service_id + config.availabilities_url_last + valid_place_id + "&filter1=1&filter2=0"
 url_services = config.establishments_service_url + valid_establishment_id + "/services"
 
 response_geocode = requests.request("GET", url_geocode, headers=config.headers, data={})
