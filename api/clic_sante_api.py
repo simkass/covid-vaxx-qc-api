@@ -39,8 +39,11 @@ def merge_establishments(est1, est2):
 
 def get_establishment_service(establishment_id):
     url = config.establishments_service_url + str(establishment_id) + "/services"
-    response = json.loads(requests.request("GET", url, headers=config.headers, data={}).text)
-    service = next((service for service in response if service['service_template']['id'] in [126, 159]), None)
+    response = requests.request("GET", url, headers=config.headers, data={})
+    service = None
+    if response.status_code == 200:
+        response = json.loads(response.text)
+        service = next((service for service in response if service['service_template']['id'] in [126, 159]), None)
     if service is not None:
         return service['id']
     return 0

@@ -37,3 +37,8 @@ Service to send email notifications for covid 19 vaccination availabilities in Q
 1. Simply call the notify_users function for a one time notification run
 2. You can also run the scheduler itself, it's currently set to run every 30 min between 7am and 11pm Eastern Time
 
+# Running tests
+In the project root folder run this command
+```
+pytest -v
+```
