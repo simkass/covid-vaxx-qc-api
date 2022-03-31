@@ -7,6 +7,8 @@ The notification service has been shut down. Nothing to change in the code.
 # covid-vaxx-qc-api
 Service to send email notifications for covid 19 vaccination availabilities in Quebec according to specified criterias
 
+Repo for the web app is found here: https://github.com/simkass/covid-vaxx-qc-app
+
 # Set up steps
 
 ### REQUIREMENTS
