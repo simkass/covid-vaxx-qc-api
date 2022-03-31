@@ -1,3 +1,4 @@
+from faulthandler import disable
 import json
 from random import randint
 
@@ -10,6 +11,12 @@ from api import clic_sante_api, config, db_client, email_client, utils
 app = Flask(__name__)
 CORS(app)
 
+disabled = True
+# 31/03/2022
+# This service is now disabled as the vaccination campaign in Québec is reaching its end.
+# GET Establishments is the only endpoint that still works for demonstration purposes on the web app.
+# The other endpoints will return 200 but won't do anything. Again just for demonstration purpose in the web app.
+# The notification service has been shut down. Nothing to change in the code.
 
 @app.route('/establishments/', methods=['GET'])
 @cross_origin(headers=["Content-Type", "Authorization"])
@@ -24,10 +31,13 @@ def get_establishments():
     else:
         return clic_sante_api.get_establishments("", lat, lng)
 
-
 @app.route('/user', methods=['POST'])
 @cross_origin(headers=["Content-Type", "Authorization"])
 def post_user():
+
+    if disabled:
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+
     response = request.get_json()
 
     recaptcha_validation = requests.post("https://www.google.com/recaptcha/api/siteverify",
@@ -56,6 +66,10 @@ def post_user():
 @app.route('/unsubscribe-request', methods=['POST'])
 @cross_origin(headers=["Content-Type", "Authorization"])
 def unsubscription_request():
+
+    if disabled:
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+
     response = request.get_json()
     email_address = response['email'].lower()
     random_code = randint(1000, 9999)
@@ -71,6 +85,10 @@ def unsubscription_request():
 @app.route('/unsubscribe', methods=['POST'])
 @cross_origin(headers=["Content-Type", "Authorization"])
 def unsubscribe():
+        
+    if disabled:
+        return json.dumps({'success': True}), 200, {'ContentType': 'application/json'}
+
     response = request.get_json()
     email_address = response['email'].lower()
     random_code = int(response['random_code'])
