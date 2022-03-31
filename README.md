@@ -1,3 +1,9 @@
+# 31/03/2022
+Please note that this service is now disabled as the vaccination campaign in Québec is reaching its end.
+GET Establishments is the only endpoint that still works for demonstration purposes on the web app.
+The other endpoints will return 200 but won't do anything. Again just for demonstration purpose in the web app.
+The notification service has been shut down. Nothing to change in the code.
+
 # covid-vaxx-qc-api
 Service to send email notifications for covid 19 vaccination availabilities in Quebec according to specified criterias
 
